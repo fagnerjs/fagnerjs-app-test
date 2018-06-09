@@ -1,0 +1,22 @@
+<ion-menu class="side-menu" [content]="mycontent">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Devices</ion-title>
+      <ion-buttons end>
+        <button class="settings" ion-button color="black" menuClose icon-only (click)="goToDevices()">
+          <ion-icon name="ios-settings"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button [ngClass]="current == item.id ? 'active' : ''" *ngFor="let item of settings.devices" ion-item (click)="setDevice(item.id)">
+        {{item.params.name}}
+        <ion-icon class="favorite" *ngIf="item.params.default" name="md-star" color="primary"></ion-icon>
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav #mycontent [root]="rootPage"></ion-nav>

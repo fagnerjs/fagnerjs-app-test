@@ -1,0 +1,27 @@
+<ion-content>
+  <div class="signIn">
+    <div class="header">
+        <div class="verticallyCenter">
+            <img src="../assets/imgs/logo-us-vertical.svg" height="117" alt="Uber Service" />
+            <p>
+                O aplicativo que você encontra <br />
+                o serviço que tanto procura
+            </p>
+        </div>
+    </div>
+    <form [formGroup]="form">
+      <label>
+        <div class="verticallyCenter">
+            <span>Informe o seu telefone</span>
+            <input formControlName="phone" type="number" placeholder="(11) 93219-0132" />
+          </div>
+        </label>
+        <a href="#" class="button secondary">
+          Entrar como prestador de serviços
+        </a>
+        <a (click)="signin()" class="button">
+          Avançar →
+        </a>
+    </form>
+</div>
+</ion-content>
