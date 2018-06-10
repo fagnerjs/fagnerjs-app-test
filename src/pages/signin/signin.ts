@@ -10,7 +10,7 @@ import { SignupPage } from '../signup/signup';
   templateUrl: 'signin.html',
 })
 export class SigninPage {
-
+  phone: string;
   form: FormGroup;
   constructor(
     public navCtrl: NavController,
@@ -22,25 +22,27 @@ export class SigninPage {
     this.form = this.formBuilder.group({
       phone: [null, [
         Validators.required,
-        Validators.maxLength(60),
-        Validators.minLength(2)
+        Validators.pattern(/^(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/gm)
       ]]
     });
   }
 
   ionViewDidLoad() {
-    this.form = this.formBuilder.group({
-      phone: [null, [
-        Validators.required,
-        Validators.pattern(/^\([1-9]{2}\) [0-9]{4,5}-[0-9]{4}$/)
-      ]]
-    });
+    this.form.get('phone').valueChanges.subscribe(v => {
+      v = v || '';
+      v = v
+        .replace(/\D/g,"")
+        .replace(/^(\d{2})(\d)/g,"($1) $2")
+        .replace(/(\d)(\d{4})$/,"$1-$2");
+      this.form.get('phone').setValue(v, {emitEvent:false});
+    })
   }
 
   signin():void {
+    console.log(this.form.value)
     if(!this.form.valid) {
       const alert = this.alertCtrl.create({
-        title: 'Numero inválido',
+        title: 'Por favor, insira um número de telefone válido',
         subTitle: '',
         buttons: [
           {
@@ -50,7 +52,10 @@ export class SigninPage {
         ]
       });
       alert.present();
+      return;
     }
+
+    this.navCtrl.push(SignupPage, this.form.value);
   }
 
 }

@@ -12,9 +12,9 @@
     <form [formGroup]="form">
       <label>
         <div class="verticallyCenter">
-            <span>Informe o seu telefone</span>
-            <input formControlName="phone" type="number" placeholder="(11) 93219-0132" />
-          </div>
+          <span>Informe o seu telefone</span>
+          <input maxlength="15" formControlName="phone" type="text" placeholder="(11) 93219-0132" />
+        </div>
         </label>
         <a href="#" class="button secondary">
           Entrar como prestador de serviços

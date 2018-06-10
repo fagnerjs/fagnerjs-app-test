@@ -43,6 +43,7 @@
     "rxjs": "5.5.7",
     "sw-toolbox": "3.6.0",
     "telefone-mask-ng2": "^1.0.7",
+    "vanilla-masker": "^1.2.0",
     "zone.js": "0.8.20"
   },
   "devDependencies": {

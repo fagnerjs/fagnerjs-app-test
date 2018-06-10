@@ -5,6 +5,7 @@ import { IonicStorageModule } from '@ionic/storage';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
+import { PhoneMask } from '../directives/phone';
 import { UtilsProvider } from './utils';
 
 // Pages
@@ -64,7 +65,8 @@ import { GraphProvider } from '../providers/graph/graph';
     ServiceHiredProfilePage,
     ServiceProviderRatePage,
     ServiceCancelPage,
-    AcquiredServicesPage
+    AcquiredServicesPage,
+    PhoneMask
   ],
   imports: [
     BrowserModule,
@@ -110,7 +112,8 @@ import { GraphProvider } from '../providers/graph/graph';
     UtilsProvider,
     PlantServiceProvider,
     ServicesServiceProvider,
-    GraphProvider
+    GraphProvider,
+    PhoneMask
   ]
 })
 export class AppModule {}

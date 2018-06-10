@@ -19,7 +19,10 @@ export class SignupPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SignupPage');
+  }
+
+  back() {
+    this.navCtrl.pop();
   }
 
 }
