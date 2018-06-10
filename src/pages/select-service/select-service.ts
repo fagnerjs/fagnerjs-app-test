@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, Loading, AlertController } from 'ionic-angular';
 
-/**
- * Generated class for the SelectServicePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { MenuPage } from '../menu/menu';
+import { ServiceSettingsPage } from '../service-settings/service-settings';
 
 @IonicPage()
 @Component({
@@ -15,11 +11,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SelectServicePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private loadingCtrl: LoadingController,
+    private alertCtrl: AlertController
+  ) {}
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SelectServicePage');
+  }
+
+  navigateToServices(param: boolean): void {
+    console.log(param)
+  }
+
+  navigateToMenu(): void {
+    this.navCtrl.push(MenuPage);
   }
 
 }

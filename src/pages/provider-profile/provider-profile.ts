@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, Loading, AlertController } from 'ionic-angular';
 
-/**
- * Generated class for the ProviderProfilePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { MenuPage } from '../menu/menu';
+import { ProviderSchedulePage } from '../provider-schedule/provider-schedule';
 
 @IonicPage()
 @Component({
@@ -14,12 +10,26 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'provider-profile.html',
 })
 export class ProviderProfilePage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  value: any;
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private loadingCtrl: LoadingController,
+    private alertCtrl: AlertController
+  ) {
+    this.value = this.navParams.data;
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ProviderProfilePage');
+    console.log(this.value)
+  }
+
+  selectProvider(): void {
+    this.navCtrl.push(ProviderSchedulePage, this.value);
+  }
+
+  back() {
+    this.navCtrl.pop();
   }
 
 }

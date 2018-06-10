@@ -1,18 +1,88 @@
-<!--
-  Generated template for the SelectServicePage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>select-service</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-
+<ion-content class="bgGray">
+  <nav>
+    <!-- <a href="" alt="Return" class="button left">
+        <svg width="20" height="10" xmlns="http://www.w3.org/2000/svg"><path d="M0 5l6-5v4h14v2H6v4z" fill="#000" fill-rule="evenodd"/></svg>
+    </a> -->
+    <div class="content noLeft">
+      <img src="../assets/imgs/logo-us-horizontal.svg" width="136" height="24" class="verticallyCenter" />
+    </div>
+    <a (click)="navigateToMenu()" alt="Menu" class="button right">
+      <svg width="20" height="14" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h12v2H4V6zm-4 6h20v2H0v-2zM0 0h20v2H0V0z" fill="#000" fill-rule="evenodd"/></svg>
+    </a>
+  </nav>
+  <div class="serviceType">
+    <p>
+      Conecte-se para poder encontrar<br />
+      prestadores de serviços próximos a você!
+    </p>
+    <a (click)="navigateToServices()" class="card cleaningServices">
+      <span class="content verticallyCenter">
+        <h1>
+          Serviços de<br />
+          Limpeza
+        </h1>
+      </span>
+    </a>
+    <a (click)="navigateToServices(true)" class="card otherServices">
+      <span class="content verticallyCenter">
+        <h1>
+          Outros<br />
+          Serviços
+        </h1>
+      </span>
+    </a>
+    <a (click)="navigateToServices()" class="card hide">
+      <span class="content">
+        <p class="icon">
+            🏢
+        </p>
+        <h2>
+            teste
+        </h2>
+        <p>
+            teste
+        </p>
+      </span>
+    </a>
+    <div class="card hide">
+      <div class="content">
+        <div class="avatar">
+          <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg" width="56" />
+        </div>
+        <p class="distance">
+          2,5km de você
+        </p>
+        <h3>
+          João Silva Cardoso
+          <!-- No máximo 16 caracteres -->
+        </h3>
+        <ul class="rate">
+          <li>
+              <img src="../assets/imgs/star-full.svg" width="13" height="12" />
+          </li>
+          <li>
+              <img src="../assets/imgs/star-full.svg" width="13" height="12" />
+          </li>
+          <li>
+              <img src="../assets/imgs/star-full.svg" width="13" height="12" />
+          </li>
+          <li>
+              <img src="../assets/imgs/star-half.svg" width="13" height="12" />
+          </li>
+          <li>
+              <img src="../assets/imgs/star-empty.svg" width="13" height="12" />
+          </li>
+          <li>
+              18 avaliações
+          </li>
+        </ul>
+        <p class="info">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ullam porro nemo quidem incidunt quos labore.
+        </p>
+        <a href="" class="button">
+          teste
+        </a>
+      </div>
+    </div>
+  </div>
 </ion-content>

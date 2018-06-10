@@ -1,18 +1,114 @@
-<!--
-  Generated template for the ServiceSettingsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>service-settings</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-
+<ion-content class="bgGray">
+  <nav>
+    <a (click)="back()" alt="Return" class="button left">
+      <svg width="20" height="10" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 5l6-5v4h14v2H6v4z" fill="#000" fill-rule="evenodd" />
+      </svg>
+    </a>
+    <div class="content"> <img src="../assets/imgs/logo-us-horizontal.svg" width="136" height="24" class="verticallyCenter" /> </div>
+    <a (click)="navigateToMenu()" alt="Menu" class="button right">
+      <svg width="20" height="14" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 6h12v2H4V6zm-4 6h20v2H0v-2zM0 0h20v2H0V0z" fill="#000" fill-rule="evenodd" />
+      </svg>
+    </a>
+  </nav>
+  <div class="serviceSettings">
+    <p>
+      Como é o local<br />
+      que será feito o serviço?
+    </p>
+    <form [formGroup]="form">
+      <div class="placeSetup">
+        <p>
+          <input formControlName="place_setup" type="radio" id="house" [value]="'house'">
+          <label for="house"><span>🏠</span>Casa</label>
+        </p>
+        <p>
+          <input formControlName="place_setup" type="radio" id="apartment" [value]="'apartment'">
+          <label for="apartment"><span>🏢</span>Apto.</label>
+        </p>
+        <p>
+          <input formControlName="place_setup" type="radio" id="business" [value]="'business'">
+          <label for="business"><span>🏭</span>Empresa</label>
+        </p>
+      </div>
+      <p>Quantos quartos?</p>
+      <div class="horizontalScroll">
+        <div class="horizontalContent">
+          <p>
+            <input formControlName="place_rooms"  value="1" type="radio" id="place_rooms_1">
+            <label for="place_rooms_1">1</label>
+          </p>
+          <p>
+            <input formControlName="place_rooms"  value="2" type="radio" id="place_rooms_2">
+            <label for="place_rooms_2">2</label>
+          </p>
+          <p>
+            <input formControlName="place_rooms"  value="3" type="radio" id="place_rooms_3">
+            <label for="place_rooms_3">3</label>
+          </p>
+          <p>
+            <input formControlName="place_rooms"  value="4" type="radio" id="place_rooms_4">
+            <label for="place_rooms_4">4</label>
+          </p>
+          <p>
+            <input formControlName="place_rooms"  value="5" type="radio" id="place_rooms_5">
+            <label for="place_rooms_5">5</label>
+          </p>
+          <p>
+            <input formControlName="place_rooms"  value="6" type="radio" id="place_rooms_6">
+            <label for="place_rooms_6">6</label>
+          </p>
+          <p>
+            <input formControlName="place_rooms"  value="7" type="radio" id="place_rooms_7">
+            <label for="place_rooms_7">7</label>
+          </p>
+          <p>
+            <input formControlName="place_rooms"  value="8" type="radio" id="place_rooms_8">
+            <label for="place_rooms_8">8</label>
+          </p>
+        </div>
+      </div>
+      <p>Quantos banheiros?</p>
+      <div class="horizontalScroll">
+        <div class="horizontalContent">
+          <p>
+            <input formControlName="place_toilets" type="radio" value="1" id="place_toilets_1">
+            <label for="place_toilets_1">1</label>
+          </p>
+          <p>
+            <input formControlName="place_toilets" type="radio" value="2" id="place_toilets_2">
+            <label for="place_toilets_2">2</label>
+          </p>
+          <p>
+            <input formControlName="place_toilets" type="radio" value="3" id="place_toilets_3">
+            <label for="place_toilets_3">3</label>
+          </p>
+          <p>
+            <input formControlName="place_toilets" type="radio" value="4" id="place_toilets_4">
+            <label for="place_toilets_4">4</label>
+          </p>
+          <p>
+            <input formControlName="place_toilets" type="radio" value="5" id="place_toilets_5">
+            <label for="place_toilets_5">5</label>
+          </p>
+          <p>
+            <input formControlName="place_toilets" type="radio" value="6" id="place_toilets_6">
+            <label for="place_toilets_6">6</label>
+          </p>
+          <p>
+            <input formControlName="place_toilets" type="radio" value="7" id="place_toilets_7">
+            <label for="place_toilets_7">7</label>
+          </p>
+          <p>
+            <input formControlName="place_toilets" type="radio" value="8" id="place_toilets_8">
+            <label for="place_toilets_8">8</label>
+          </p>
+        </div>
+      </div>
+    </form>
+    <a (click)="submit()" class="button sticky">
+      Avançar →
+    </a>
+  </div>
 </ion-content>

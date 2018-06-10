@@ -1,18 +1,58 @@
-<!--
-  Generated template for the ServiceSchedulePage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>service-schedule</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-
+<ion-content class="bgGray">
+  <nav>
+      <a (click)="back()" alt="Return" class="button left">
+          <svg width="20" height="10" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 5l6-5v4h14v2H6v4z" fill="#000" fill-rule="evenodd" /> </svg>
+      </a>
+      <div class="content"> <img src="../assets/imgs/logo-us-horizontal.svg" width="136" height="24" class="verticallyCenter" /> </div>
+      <a (click)="navigateToMenu()" alt="Menu" class="button right">
+          <svg width="20" height="14" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 6h12v2H4V6zm-4 6h20v2H0v-2zM0 0h20v2H0V0z" fill="#000" fill-rule="evenodd" /> </svg>
+      </a>
+  </nav>
+  <div class="serviceSchedule">
+    <p> Para quando você quer o serviço? </p>
+    <a (click)="schedule('now')" class="card">
+      <span class="content verticallyCenter">
+        <p class="icon">
+            ☝️
+        </p>
+        <h2>
+            Agora
+        </h2>
+        <p>
+            ou daqui uma hora
+        </p>
+      </span>
+    </a>
+    <a (click)="schedule('today')" class="card">
+      <span class="content verticallyCenter">
+        <p class="icon">
+            🕑
+        </p>
+        <h2>
+            Hoje
+        </h2>
+        <p>
+            em qualquer horário
+        </p>
+      </span>
+    </a>
+    <a (click)="schedule('schedule')" class="card">
+      <span class="content verticallyCenter">
+        <p class="icon">
+            🗓
+        </p>
+        <h2>
+            Agendar
+        </h2>
+        <p>
+            um dia e horário
+        </p>
+      </span>
+    </a>
+    <a (click)="schedule('after')" class="button tertiary floating">
+      Escolher depois
+    </a>
+  </div>
 </ion-content>

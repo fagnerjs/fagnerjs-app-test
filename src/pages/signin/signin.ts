@@ -12,6 +12,7 @@ import { SignupPage } from '../signup/signup';
 export class SigninPage {
   phone: string;
   form: FormGroup;
+  value: any;
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -25,6 +26,8 @@ export class SigninPage {
         Validators.pattern(/^(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/gm)
       ]]
     });
+
+    this.value = this.navParams.data;
   }
 
   ionViewDidLoad() {
@@ -35,11 +38,10 @@ export class SigninPage {
         .replace(/^(\d{2})(\d)/g,"($1) $2")
         .replace(/(\d)(\d{4})$/,"$1-$2");
       this.form.get('phone').setValue(v, {emitEvent:false});
-    })
+    });
   }
 
-  signin():void {
-    console.log(this.form.value)
+  submit():void {
     if(!this.form.valid) {
       const alert = this.alertCtrl.create({
         title: 'Por favor, insira um número de telefone válido',
@@ -54,8 +56,9 @@ export class SigninPage {
       alert.present();
       return;
     }
-
-    this.navCtrl.push(SignupPage, this.form.value);
+    this.navCtrl.push(SignupPage,
+      Object.assign(this.value, JSON.parse(JSON.stringify(this.form.value)))
+    );
   }
 
 }

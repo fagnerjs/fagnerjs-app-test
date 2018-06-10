@@ -1,7 +1,12 @@
+// Reset
+// --------------------------------------------------
+@import "../theme/font.min";
+@import "../theme/reset.min";
+
 html {
   overflow-x: hidden;
 }
-html, body, input, button, select, textarea {
+html, body, input, button, select, textarea, * {
   font-family: 'ClanPro-NarrowBook', sans-serif;
 }
 body {
@@ -47,6 +52,10 @@ a {
   font-family: 'ClanPro-NarrowBold', sans-serif;
   font-weight: bold;
   text-decoration: none;
+}
+
+img {
+  max-width: initial;
 }
 
 /* Navigation Bar
@@ -337,6 +346,7 @@ nav .right {
 .button.sticky {
   position: fixed;
   bottom: 0;
+  top: inherit;
   left: 0;
 }
 .button.floating {
@@ -395,13 +405,13 @@ nav .right {
   height: calc(50vh - 156px);
 }
 .cleaningServices {
-  background-image: url('../img/bg-cleaningServices.jpg');
+  background-image: url('../assets/imgs/bg-cleaningServices.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
 .otherServices {
-  background-image: url('../img/bg-otherServices.jpg');
+  background-image: url('../assets/imgs/bg-otherServices.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;

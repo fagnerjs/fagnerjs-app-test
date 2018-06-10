@@ -11,24 +11,26 @@
       </a> -->
   </nav>
   <div class="signUp">
-      <p>
-          Você não tem cadastro, <br />
-          crie grátis sua conta!
-      </p>
+    <p>
+        Você não tem cadastro, <br />
+        crie grátis sua conta!
+    </p>
+    <form [formGroup]="form">
       <label>
-          <div class="verticallyCenter">
-              <span>Nome</span>
-              <input type="text" placeholder="Maria Silva" />
-          </div>
+        <div class="verticallyCenter">
+          <span>Nome</span>
+          <input type="text" formControlName="name" placeholder="Maria Silva" />
+        </div>
       </label>
       <label>
-          <div class="verticallyCenter">
-              <span>E-mail</span>
-              <input type="email" placeholder="maria.silva@email.com" />
-          </div>
+        <div class="verticallyCenter">
+          <span>E-mail</span>
+          <input type="email" formControlName="email" placeholder="maria.silva@email.com" />
+        </div>
       </label>
-      <a href="../files/04-password.html" class="button sticky">
-          Avançar →
-      </a>
+    </form>
+    <a (click)="submit()" class="button sticky">
+        Avançar →
+    </a>
   </div>
 </ion-content>
