@@ -48,7 +48,7 @@ export class MyApp {
       splashScreen.hide();
 
       const perform = () => {
-          this.rootPage = SelectServicePage;
+          this.rootPage = SigninPage;
         // this.storage.get('settings').then(settings => {
         //   if(!settings || ((settings||{}).devices||[]).length == 0) {
         //     this.rootPage = IntroPage;
