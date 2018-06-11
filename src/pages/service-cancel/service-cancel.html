@@ -1,18 +1,23 @@
-<!--
-  Generated template for the ServiceCancelPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>service-cancel</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-
+<ion-content>
+  <div class="serviceCancel">
+    <a (click)="back()" class="return">
+      <svg width="20" height="10" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 5l6-5v4h14v2H6v4z" fill="#000" fill-rule="evenodd"></path>
+      </svg>
+    </a>
+    <div class="verticallyCenter">
+      <h2>Você realmente deseja
+          cancelar a contratação
+          do serviço de limpeza?
+      </h2>
+      <p class="summary">
+          Caso desejar o cancelamento, a taxa
+          de cancelamento será cobrada conforme
+          os termos de uso.
+      </p>
+    </div>
+    <a (click)="performCancel()" class="button tertiary sticky">
+      Solicitar cancelamento →
+    </a>
+  </div>
 </ion-content>

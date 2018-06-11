@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, LoadingController, ModalController
 
 import { MenuPage } from '../menu/menu';
 import { ServiceHiredProfilePage } from '../service-hired-profile/service-hired-profile';
+import { ServiceSettingsPage } from '../service-settings/service-settings';
 
 @IonicPage()
 @Component({
@@ -23,7 +24,7 @@ export class SelectServicePage {
   }
 
   navigateToServices(param: boolean): void {
-    console.log(param)
+    this.navCtrl.push(ServiceSettingsPage);
   }
 
   navigateToMenu(): void {

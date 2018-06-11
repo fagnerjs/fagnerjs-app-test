@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, ModalController, Loading, AlertController } from 'ionic-angular';
 
-/**
- * Generated class for the ServiceCancelPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { SelectServicePage } from '../select-service/select-service';
 
 @IonicPage()
 @Component({
@@ -14,12 +9,50 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'service-cancel.html',
 })
 export class ServiceCancelPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  loading: Loading
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private alertCtrl: AlertController,
+    private loadingCtrl: LoadingController
+  ) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ServiceCancelPage');
+  ionViewDidLoad() {}
+
+  performCancel() {
+    this.showLoading('Aguarde, solicitando cancelamento...');
+
+    // timeout para testar a transição entre loading e alert
+    setTimeout(() => {
+      this.loading.dismiss();
+      const alert = this.alertCtrl.create({
+        title: 'Serviço cancelado com sucesso!',
+        subTitle: '',
+        buttons: [
+          {
+            text: 'Ok',
+            handler: () => {
+              this.navCtrl.setRoot(SelectServicePage);
+            }
+          }
+        ]
+      });
+      alert.present();
+
+    },3000)
+  }
+
+  back():void {
+    this.navCtrl.pop();
+  }
+
+  showLoading(message: string): void {
+    this.loading = this.loadingCtrl.create({
+      content: message || 'Aguarde...',
+      dismissOnPageChange: true
+    });
+    this.loading.present();
   }
 
 }
