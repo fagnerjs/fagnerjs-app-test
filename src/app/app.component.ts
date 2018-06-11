@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import * as moment from 'moment';
 
 import { SigninPage } from '../pages/signin/signin';
-import { ServiceSettingsPage } from '../pages/service-settings/service-settings';
+import { SelectServicePage } from '../pages/select-service/select-service';
 
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { ServicesServiceProvider } from '../providers/services-service/services-service';
@@ -48,7 +48,7 @@ export class MyApp {
       splashScreen.hide();
 
       const perform = () => {
-          this.rootPage = ServiceSettingsPage;
+          this.rootPage = SelectServicePage;
         // this.storage.get('settings').then(settings => {
         //   if(!settings || ((settings||{}).devices||[]).length == 0) {
         //     this.rootPage = IntroPage;

@@ -280,7 +280,7 @@ ion-alert.alert-top {
   align-items: flex-start;
 }
 
-ion-alert input {
+ion-alert input, ion-alert ion-datetime {
   width: 100%;
 }
 
@@ -1039,6 +1039,7 @@ samp {
 
 label,
 input,
+ion-datetime,
 select,
 textarea {
   font-family: inherit;
@@ -1070,6 +1071,7 @@ textarea::placeholder {
 
 form,
 input,
+ion-datetime,
 optgroup,
 select {
   margin: 0;
@@ -1077,9 +1079,11 @@ select {
   color: inherit;
 }
 
-html input[type="button"],
+html input[type="button"], html ion-datetime[type="button"],
 input[type="reset"],
-input[type="submit"] {
+ion-datetime[type="reset"],
+input[type="submit"],
+ion-datetime[type="submit"] {
   cursor: pointer;
   -webkit-appearance: button;
 }
@@ -1100,6 +1104,7 @@ button ion-label,
 [tappable] ion-icon,
 [tappable] ion-label,
 input,
+ion-datetime,
 textarea {
   -ms-touch-action: manipulation;
   touch-action: manipulation;
@@ -1127,30 +1132,35 @@ button {
 
 a[disabled],
 button[disabled],
-html input[disabled] {
+html input[disabled],
+html ion-datetime[disabled] {
   cursor: default;
 }
 
 button::-moz-focus-inner,
-input::-moz-focus-inner {
+input::-moz-focus-inner,
+ion-datetime::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+input[type="checkbox"], ion-datetime[type="checkbox"],
+input[type="radio"],
+ion-datetime[type="radio"] {
   padding: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button, ion-datetime[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button,
+ion-datetime[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
+input[type="search"]::-webkit-search-cancel-button, ion-datetime[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration,
+ion-datetime[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -14703,7 +14713,7 @@ textarea.text-input {
   opacity: .4;
 }
 
-input.text-input:-webkit-autofill {
+input.text-input:-webkit-autofill, ion-datetime.text-input:-webkit-autofill {
   background-color: transparent;
 }
 
@@ -14735,8 +14745,9 @@ input.text-input:-webkit-autofill {
   pointer-events: none;
 }
 
-.item-input-has-focus input,
+.item-input-has-focus input, .item-input-has-focus ion-datetime,
 .input-has-focus input,
+.input-has-focus ion-datetime,
 .item-input-has-focus textarea,
 .input-has-focus textarea,
 .item-input-has-focus a,
@@ -25542,6 +25553,7 @@ ion-buttons {
 ion-buttons button,
 ion-buttons a,
 ion-buttons input,
+ion-buttons ion-datetime,
 ion-buttons textarea,
 ion-buttons div {
   pointer-events: auto;
@@ -47706,7 +47718,7 @@ html {
   overflow-x: hidden;
 }
 
-html, body, input, button, select, textarea, * {
+html, body, input, ion-datetime, button, select, textarea, * {
   font-family: 'ClanPro-NarrowBook', sans-serif;
 }
 
@@ -47742,7 +47754,7 @@ span {
   text-align: center;
 }
 
-input {
+input, ion-datetime {
   font-size: 17px;
   line-height: 24px;
   display: block;
@@ -48056,7 +48068,7 @@ nav .right {
   margin-bottom: 12px;
 }
 
-.signIn label input {
+.signIn label input, .signIn label ion-datetime {
   font-size: 21px;
   line-height: 28px;
 }
@@ -48137,7 +48149,7 @@ nav .right {
   text-align: left;
 }
 
-.signUp label input {
+.signUp label input, .signUp label ion-datetime {
   margin-left: 32px;
   padding-bottom: 32px;
   text-align: left;
@@ -48636,7 +48648,7 @@ form {
   text-align: left;
 }
 
-.providerProfile label input {
+.providerProfile label input, .providerProfile label ion-datetime {
   margin-left: 32px;
   padding-bottom: 32px;
   text-align: left;
@@ -49144,4 +49156,15 @@ form {
   animation-name: fade-in;
   -webkit-animation-duration: 200ms;
   animation-duration: 200ms;
+}
+
+/* IONIC
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ion-datetime {
+  position: relative;
+  padding-left: 0 !important;
+}
+
+.picker-ios .picker-opt {
+  height: 2.5rem;
 }

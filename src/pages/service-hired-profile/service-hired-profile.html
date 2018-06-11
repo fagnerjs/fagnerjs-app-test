@@ -1,18 +1,23 @@
-<!--
-  Generated template for the ServiceHiredProfilePage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>service-hired-profile</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-
+<ion-content class="bgGray">
+  <div class="serviceHired">
+      <a (click)="close()" class="close">
+          <svg width="18" height="17" xmlns="http://www.w3.org/2000/svg"><path d="M9 6.545L15.545 0l1.415 1.414-6.546 6.546 6.89 6.89-1.414 1.413L9 9.373l-6.89 6.89L.696 14.85l6.89-6.89L1.04 1.415 2.455 0 9 6.545z" fill="#000" fill-rule="evenodd"/></svg>
+      </a>
+      <div class="verticallyCenter">
+          <h2 class="success">
+              Contratação confirmada
+          </h2>
+          <div class="avatar">
+              <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg" width="112" />
+          </div>
+          <h2>João Silva Cardoso</h2>
+          <p class="summary">
+              Serviço de Limpeza<br />
+              no dia 20/02/18 às 09:00
+          </p>
+      </div>
+      <a (click)="cancel()" class="button tertiary sticky">
+          Cancelar Serviço
+      </a>
+  </div>
 </ion-content>

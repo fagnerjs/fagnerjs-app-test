@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, Loading, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, ModalController, Loading, AlertController } from 'ionic-angular';
 
 import { MenuPage } from '../menu/menu';
-import { ServiceSettingsPage } from '../service-settings/service-settings';
+import { ServiceHiredProfilePage } from '../service-hired-profile/service-hired-profile';
 
 @IonicPage()
 @Component({
@@ -15,7 +15,8 @@ export class SelectServicePage {
     public navCtrl: NavController,
     public navParams: NavParams,
     private loadingCtrl: LoadingController,
-    private alertCtrl: AlertController
+    private alertCtrl: AlertController,
+    private modalCtrl: ModalController
   ) {}
 
   ionViewDidLoad() {
@@ -27,6 +28,11 @@ export class SelectServicePage {
 
   navigateToMenu(): void {
     this.navCtrl.push(MenuPage);
+  }
+
+  servicePreview(item:any) {
+    const modal = this.modalCtrl.create(ServiceHiredProfilePage, item);
+    modal.present();
   }
 
 }

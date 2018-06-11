@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, Loading, AlertController } from 'ionic-angular';
 
-/**
- * Generated class for the ServiceHiredPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { MenuPage } from '../menu/menu';
+import { SelectServicePage } from '../select-service/select-service';
+
+import Util from '../../shared/util/util';
 
 @IonicPage()
 @Component({
@@ -14,12 +12,25 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'service-hired.html',
 })
 export class ServiceHiredPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  value: any;
+  private util: Util = new Util();
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private loadingCtrl: LoadingController,
+    private alertCtrl: AlertController
+  ) {
+    this.value = this.navParams.data;
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ServiceHiredPage');
+  ionViewDidLoad() {}
+
+  close():void {
+    this.navCtrl.push(SelectServicePage);
+  }
+
+  back() {
+    this.navCtrl.pop();
   }
 
 }

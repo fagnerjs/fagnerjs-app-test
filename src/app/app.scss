@@ -1266,3 +1266,16 @@ form {
   -webkit-animation-duration: 200ms;
   animation-duration: 200ms;
 }
+
+
+/* IONIC
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ion-datetime {
+  @extend input;
+  position: relative;
+  padding-left: 0 !important;
+}
+
+.picker-ios .picker-opt {
+  height: 2.5rem;
+}
