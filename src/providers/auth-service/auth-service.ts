@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers, RequestOptions } from '@angular/http';
+import { CustomHttp } from '../customHttp';
+
+import configs from '../../app/config';
 
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
@@ -7,34 +9,22 @@ import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class AuthServiceProvider {
-
-  options: RequestOptions;
-  apiHost: string;
-
-  constructor(private http: Http) {
+  private apiHost: string = configs.API_HOST;
+  private headers =  {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
   }
 
-  getDefaultHeaders() {
-    const headers = new Headers();
-    headers.append('Accept', 'application/json');
-    headers.append('Content-Type', 'application/json');
-    return headers;
+  constructor(private http: CustomHttp) {
   }
 
-  authenticate(data, connection){
-    this.apiHost = `http://${connection.host}:${connection.port}`;
-    const options = new RequestOptions({headers: this.getDefaultHeaders()});
-    return this.http.post(`${this.apiHost}/auth/login`, JSON.stringify(data), options)
-      .map(res => res.json());
+  authenticate(email:string, password:string) {
+    return this.http.post(`${this.apiHost}/authorization/local/login`, {email, password}, {headers: Object.assign(JSON.parse(JSON.stringify(this.headers)), {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    })});
   }
 
-  check(session, connection){
-    this.apiHost = `http://${connection.host}:${connection.port}`;
-    const headers = this.getDefaultHeaders();
-    headers.append('session-id', session);
-    const options = new RequestOptions({
-      headers
-    });
-    return this.http.get(`${this.apiHost}/auth/check`, options).map(res => res.json());
+  me(session:string) {
+    return this.http.get(`${this.apiHost}/authorization/local/me`);
   }
 }

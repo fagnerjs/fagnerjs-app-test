@@ -4,6 +4,7 @@ import { HttpModule, Http, XHRBackend, RequestOptions } from '@angular/http';
 import { IonicStorageModule } from '@ionic/storage';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+import {HTTP} from '@ionic-native/http';
 
 import { PhoneMask } from '../directives/phone';
 import { UtilsProvider } from './utils';
@@ -33,16 +34,11 @@ import { AcquiredServicesPage } from '../pages/acquired-services/acquired-servic
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
-import { SettingsServiceProvider } from '../providers/settings-service/settings-service';
 
-// Http Interceptor
-import { httpFactory } from "../providers/http/http.factory";
-import { PubSubService } from '../providers/http/pubsub-service';
-import { StateServiceProvider } from '../providers/state-service/state-service';
-import { PlantServiceProvider } from '../providers/plant-service/plant-service';
-import { ServicesServiceProvider } from '../providers/services-service/services-service';
-import { GraphProvider } from '../providers/graph/graph';
-
+import { HttpProvider } from '../providers/httpProvider';
+import { HttpAngularProvider } from '../providers/http-angular';
+import { HttpNativeProvider } from '../providers/http-native';
+import { CustomHttp } from '../providers/customHttp';
 
 @NgModule({
   declarations: [
@@ -101,19 +97,13 @@ import { GraphProvider } from '../providers/graph/graph';
     SplashScreen,
     AuthServiceProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    SettingsServiceProvider,
-    PubSubService,
-    {
-      provide: Http,
-      useFactory: httpFactory,
-      deps: [XHRBackend, RequestOptions, PubSubService]
-    },
-    StateServiceProvider,
     UtilsProvider,
-    PlantServiceProvider,
-    ServicesServiceProvider,
-    GraphProvider,
-    PhoneMask
+    PhoneMask,
+    HTTP,
+    HttpProvider,
+    HttpAngularProvider,
+    HttpNativeProvider,
+    CustomHttp
   ]
 })
 export class AppModule {}
