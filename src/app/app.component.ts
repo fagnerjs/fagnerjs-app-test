@@ -46,16 +46,21 @@ export class MyApp {
       moment.locale('pt-BR');
 
       const perform = () => {
+
         // inexistent session
         if(!configs.settings.auth.session) {
-          this.rootPage = LoginPage;
+          this.rootPage = SigninPage;
           return;
         }
 
+        this.showLoading();
+
         // check session
-        this.auth.me(configs.settings.auth.session).then(r => {
+        this.auth.me(configs.settings.auth.session).then(() => {
+          this.loading.dismiss();
           this.rootPage = SelectServicePage;
         }).catch(e => {
+          this.loading.dismiss();
           const alert = this.alertCtrl.create({
             title:  'HTTP failed',
             subTitle: 'Unable to connect to default server',
@@ -63,7 +68,7 @@ export class MyApp {
               {
                 text: 'Ok',
                 handler: () => {
-                  this.rootPage = LoginPage;
+                  this.rootPage = SigninPage;
                 }
               }
             ]

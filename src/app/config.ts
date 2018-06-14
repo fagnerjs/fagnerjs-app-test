@@ -2,7 +2,8 @@ export default {
   API_HOST: 'http://localhost:9292',
   settings: {
     auth: {
-      session: null
+      session: null,
+      user: null
     }
   }
 }

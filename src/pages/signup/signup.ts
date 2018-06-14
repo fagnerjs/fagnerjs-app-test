@@ -20,7 +20,7 @@ export class SignupPage {
     private alertCtrl: AlertController
   ) {
     this.form = this.formBuilder.group({
-      name: [null, [
+      first_name: [null, [
         Validators.required
       ]],
       email: [null, [
@@ -43,7 +43,7 @@ export class SignupPage {
   submit():void {
     if(!this.form.valid) {
       const alert = this.alertCtrl.create({
-        title: !this.form.get('name').valid ? 'Por favor, insira seu nome' : 'Por favor, insira um e-mail válido',
+        title: !this.form.get('first_name').valid ? 'Por favor, insira seu nome' : 'Por favor, insira um e-mail válido',
         subTitle: '',
         buttons: [
           {

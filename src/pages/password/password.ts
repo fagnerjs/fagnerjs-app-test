@@ -4,6 +4,8 @@ import { FormBuilder, FormArray, FormGroup, Validators, FormControl, AbstractCon
 
 import { SelectServicePage } from '../select-service/select-service';
 
+import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
+
 function passwordConfirming(c: AbstractControl): any {
   if(!c.parent || !c) return;
   const pwd = c.parent.get('password');
@@ -22,12 +24,14 @@ function passwordConfirming(c: AbstractControl): any {
 export class PasswordPage {
   form: FormGroup;
   value: any;
+  loading: Loading;
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     private formBuilder: FormBuilder,
     private loadingCtrl: LoadingController,
-    private alertCtrl: AlertController
+    private alertCtrl: AlertController,
+    private auth: AuthServiceProvider
   ) {
     this.form = this.formBuilder.group({
       password: [null, [
@@ -80,14 +84,31 @@ export class PasswordPage {
       return;
     }
 
+    this.showLoading();
+    this.auth.create(Object.assign(this.value, JSON.parse(JSON.stringify(this.form.value))))
+      .then(r => {
+        this.loading.dismiss().then(() => this.navCtrl.push(SelectServicePage));
+      })
+      .catch(e => {
+        console.log(e)
+      })
+
     // Apenas depois que o cadastro for feito com sucesso
-    this.navCtrl.push(SelectServicePage,
-      Object.assign(this.value, JSON.parse(JSON.stringify(this.form.value)))
-    );
+    // this.navCtrl.push(SelectServicePage,
+    //   Object.assign(this.value, JSON.parse(JSON.stringify(this.form.value)))
+    // );
   }
 
   back() {
     this.navCtrl.pop();
+  }
+
+  showLoading(message:string = ''): void {
+    this.loading = this.loadingCtrl.create({
+      content: message || 'Aguarde...',
+      dismissOnPageChange: true
+    });
+    this.loading.present();
   }
 
 }
