@@ -61,7 +61,7 @@ export class SigninPage {
       return;
     }
 
-    this.auth.check(this.form.get('phone').value)
+    this.auth.check({phone:this.form.get('phone').value})
       .then(() => {
         this.navCtrl.push(LoginPage,
           Object.assign(this.value, JSON.parse(JSON.stringify(this.form.value)))

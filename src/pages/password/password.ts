@@ -90,13 +90,18 @@ export class PasswordPage {
         this.loading.dismiss().then(() => this.navCtrl.push(SelectServicePage));
       })
       .catch(e => {
-        console.log(e)
-      })
-
-    // Apenas depois que o cadastro for feito com sucesso
-    // this.navCtrl.push(SelectServicePage,
-    //   Object.assign(this.value, JSON.parse(JSON.stringify(this.form.value)))
-    // );
+        const alert = this.alertCtrl.create({
+          title: 'Falha',
+          subTitle: 'Ocorreu um erro efetuar o cadastro',
+          buttons: [
+            {
+              text: 'Ok',
+              handler: () => {}
+            }
+          ]
+        });
+        alert.present();
+      });
   }
 
   back() {

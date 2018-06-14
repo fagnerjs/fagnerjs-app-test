@@ -56,8 +56,8 @@ export class AuthServiceProvider {
     });
   }
 
-  check(phone:string) {
-    return this.http.get(`${this.apiHost}/users/check`, {phone});
+  check(params:any) {
+    return this.http.get(`${this.apiHost}/users/check`, params);
   }
 
   me(session:string) {
