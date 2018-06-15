@@ -11,24 +11,24 @@
                 <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg" width="56p" />
             </div>
             <div class="info">
-                <h4>Carolina Alves</h4>
-                <p>carolina.alves@gmail.com</p>
+                <h4>{{user.first_name}}</h4>
+                <p>{{user.email}}</p>
             </div>
         </div>
         <ul class="nav">
             <li>
-                <a href="" title="Início">
+                <a (click)="navigation('select-service')" title="Início">
                     <i>🏡</i>
                     Início
                 </a>
             </li>
-            <li>
+            <!-- <li>
                 <a href="../files/19-acquired-services.html" title="Serviços contratados">
                     <i>✍️</i>
                     Serviços contratados
                     <span>2</span>
                 </a>
-            </li>
+            </li> -->
             <li>
                 <a href="" title="Termos de Serviço & Política">
                     <i>📝</i>

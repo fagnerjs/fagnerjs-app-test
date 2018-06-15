@@ -57,23 +57,27 @@ export class MyApp {
 
         // check session
         this.auth.me(configs.settings.auth.session).then(() => {
-          this.loading.dismiss();
-          this.rootPage = SelectServicePage;
+          this.loading.dismiss().then(() => this.rootPage = SelectServicePage);
         }).catch(e => {
-          this.loading.dismiss();
-          const alert = this.alertCtrl.create({
-            title:  'HTTP failed',
-            subTitle: 'Unable to connect to default server',
-            buttons: [
-              {
-                text: 'Ok',
-                handler: () => {
-                  this.rootPage = SigninPage;
-                }
-              }
-            ]
-          });
-          alert.present();
+          if(e.status == 401) {
+            this.loading.dismiss().then(() => this.nav.setRoot(SigninPage))
+          }else {
+            this.loading.dismiss().then(() => {
+              const alert = this.alertCtrl.create({
+                title:  'HTTP failed',
+                subTitle: 'Unable to connect to default server',
+                buttons: [
+                  {
+                    text: 'Ok',
+                    handler: () => {
+                      this.rootPage = SigninPage;
+                    }
+                  }
+                ]
+              });
+              alert.present();
+            });
+          }
         });
       }
 

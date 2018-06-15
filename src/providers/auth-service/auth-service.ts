@@ -79,7 +79,7 @@ export class AuthServiceProvider {
           }).catch(reject);
 
         }).catch(reject);
-      });
+      }).catch(reject);
 
     })
   }

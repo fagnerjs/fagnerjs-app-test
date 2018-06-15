@@ -14,37 +14,36 @@
   </nav>
   <div class="serviceProvider">
       <p> Veja os prestadores de <br />serviço de limpeza: </p>
-      <div class="card">
+      <div *ngFor="let item of providers.data.items" class="card">
           <div class="content">
               <div class="avatar">
                   <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg" width="56" />
               </div>
               <p class="distance">
-                  2,5km de você
+                {{item.address?.loc?.distance / 1000 | number: '1.1-1'}}km de você
               </p>
               <h3>
-                  João Silva Cardoso
-                  <!-- No máximo 16 caracteres -->
+                  {{item.first_name}}
               </h3>
               <ul class="rate">
-                  <li>
-                      <img src="../assets/imgs/star-full.svg" width="13" height="12" />
-                  </li>
-                  <li>
-                      <img src="../assets/imgs/star-full.svg" width="13" height="12" />
-                  </li>
-                  <li>
-                      <img src="../assets/imgs/star-full.svg" width="13" height="12" />
-                  </li>
-                  <li>
-                      <img src="../assets/imgs/star-half.svg" width="13" height="12" />
-                  </li>
-                  <li>
-                      <img src="../assets/imgs/star-empty.svg" width="13" height="12" />
-                  </li>
-                  <li>
-                      18 avaliações
-                  </li>
+                <li>
+                    <img [src]="item.rating?.average >= 1 ? '../assets/imgs/star-full.svg' : '../assets/imgs/star-empty.svg'" width="13" height="12" />
+                </li>
+                <li>
+                    <img [src]="item.rating?.average >= 2 ? '../assets/imgs/star-full.svg' : '../assets/imgs/star-empty.svg'" width="13" height="12" />
+                </li>
+                <li>
+                    <img [src]="item.rating?.average >= 3 ? '../assets/imgs/star-full.svg' : '../assets/imgs/star-empty.svg'" width="13" height="12" />
+                </li>
+                <li>
+                    <img [src]="item.rating?.average >= 4 ? '../assets/imgs/star-full.svg' : '../assets/imgs/star-empty.svg'" width="13" height="12" />
+                </li>
+                <li>
+                    <img [src]="item.rating?.average >= 5 ? '../assets/imgs/star-full.svg' : '../assets/imgs/star-empty.svg'" width="13" height="12" />
+                </li>
+                <li>
+                  {{item.rating?.count_rating}} {{item.rating?.count_rating === 1 ? 'avaliação' : 'avaliações'}}
+                </li>
               </ul>
               <p class="info">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ullam porro nemo quidem incidunt quos labore.

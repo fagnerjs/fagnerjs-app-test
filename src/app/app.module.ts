@@ -34,6 +34,7 @@ import { AcquiredServicesPage } from '../pages/acquired-services/acquired-servic
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
+import { UsersServiceProvider } from '../providers/users-service/users-service';
 
 import { HttpProvider } from '../providers/httpProvider';
 import { HttpAngularProvider } from '../providers/http-angular';
@@ -96,6 +97,7 @@ import { CustomHttp } from '../providers/customHttp';
     StatusBar,
     SplashScreen,
     AuthServiceProvider,
+    UsersServiceProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     UtilsProvider,
     PhoneMask,
