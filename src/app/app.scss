@@ -588,7 +588,7 @@ nav .right {
 .card .content .rate li:last-child {
   padding-left: 4px;
 }
-.card .content .button {
+.card .content .button:not(.secondary) {
   font-size: 15px;
   line-height: 46px;
   height: 48px;

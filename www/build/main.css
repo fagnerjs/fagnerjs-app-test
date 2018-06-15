@@ -48387,7 +48387,7 @@ nav .right {
   padding-left: 4px;
 }
 
-.card .content .button {
+.card .content .button:not(.secondary) {
   font-size: 15px;
   line-height: 46px;
   height: 48px;
@@ -49170,4 +49170,11 @@ ion-datetime {
   font-size: 65%;
   line-height: 130%;
   font-weight: normal;
+}
+
+page-service-provider .card .content .button.secondary {
+  line-height: 46px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  height: 46px;
 }

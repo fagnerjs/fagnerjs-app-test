@@ -42,7 +42,7 @@ export class ServiceProviderPage {
     this.value = this.navParams.data;
   }
 
-  ionViewDidLoad() {
+  ionViewDidLoad(): void {
     this.userService.searchByGeo({geo:'-23.535809, -46.651249'}).then(result => {
       this.providers = result.body;
     }).catch(err => {
@@ -64,5 +64,4 @@ export class ServiceProviderPage {
   back() {
     this.navCtrl.pop();
   }
-
 }

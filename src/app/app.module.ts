@@ -30,6 +30,8 @@ import { ServiceProviderRatePage } from '../pages/service-provider-rate/service-
 import { ServiceCancelPage } from '../pages/service-cancel/service-cancel';
 import { AcquiredServicesPage } from '../pages/acquired-services/acquired-services';
 
+// Pipes
+import { TruncatePipe } from '../pipes/truncate'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -63,7 +65,8 @@ import { CustomHttp } from '../providers/customHttp';
     ServiceProviderRatePage,
     ServiceCancelPage,
     AcquiredServicesPage,
-    PhoneMask
+    PhoneMask,
+    TruncatePipe
   ],
   imports: [
     BrowserModule,

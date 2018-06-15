@@ -3,7 +3,11 @@ import { IonicPage, NavController, NavParams, LoadingController, ModalController
 
 import { MenuPage } from '../menu/menu';
 import { ServiceHiredProfilePage } from '../service-hired-profile/service-hired-profile';
-import { ServiceSettingsPage } from '../service-settings/service-settings';
+
+// No modo completo, ira direcionar pra ServiceSettings
+//import { ServiceSettingsPage } from '../service-settings/service-settings';
+
+import { ServiceProviderPage } from '../service-provider/service-provider';
 
 @IonicPage()
 @Component({
@@ -24,7 +28,10 @@ export class SelectServicePage {
   }
 
   navigateToServices(param: boolean): void {
-    this.navCtrl.push(ServiceSettingsPage);
+    // No modo completo, ira direcionar pra ServiceSettings
+    //this.navCtrl.push(ServiceSettingsPage);
+
+    this.navCtrl.push(ServiceProviderPage);
   }
 
   navigateToMenu(): void {
