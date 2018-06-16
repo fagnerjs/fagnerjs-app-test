@@ -14,38 +14,47 @@
         <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg">
     </div>
     <h2>
-        João Silva Cardoso
+      {{provider?.first_name}}
     </h2>
     <ul class="rate">
       <li>
-          <img src="../assets/imgs/star-full.svg" width="13" height="12" />
+          <img [src]="provider?.rating?.average >= 1 ? '../assets/imgs/star-full.svg' : '../assets/imgs/star-empty.svg'" width="13" height="12" />
       </li>
       <li>
-          <img src="../assets/imgs/star-full.svg" width="13" height="12" />
+          <img [src]="provider?.rating?.average >= 2 ? '../assets/imgs/star-full.svg' : '../assets/imgs/star-empty.svg'" width="13" height="12" />
       </li>
       <li>
-          <img src="../assets/imgs/star-full.svg" width="13" height="12" />
+          <img [src]="provider?.rating?.average >= 3 ? '../assets/imgs/star-full.svg' : '../assets/imgs/star-empty.svg'" width="13" height="12" />
       </li>
       <li>
-          <img src="../assets/imgs/star-half.svg" width="13" height="12" />
+          <img [src]="provider?.rating?.average >= 4 ? '../assets/imgs/star-full.svg' : '../assets/imgs/star-empty.svg'" width="13" height="12" />
       </li>
       <li>
-          <img src="../assets/imgs/star-empty.svg" width="13" height="12" />
+          <img [src]="provider?.rating?.average >= 5 ? '../assets/imgs/star-full.svg' : '../assets/imgs/star-empty.svg'" width="13" height="12" />
       </li>
       <li>
-          18 avaliações
+        {{provider?.rating?.count_rating || 0}} {{provider?.rating?.count_rating === 1 ? 'avaliação' : 'avaliações'}}
       </li>
     </ul>
     <span class="distance">
-        a 2,5km de você
+        a {{provider?.address?.loc?.distance / 1000 | number: '1.1-1'}}km de você
     </span>
     <div class="info">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem commodi veniam ullam alias incidunt consectetur, aliquam esse sint tempora deleniti quaerat ab cupiditate iusto nobis reprehenderit repellat, est cum fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem commodi veniam ullam alias incidunt consectetur, aliquam esse sint tempora deleniti quaerat ab cupiditate iusto nobis reprehenderit repellat, est cum fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem commodi veniam ullam alias incidunt consectetur, aliquam esse sint tempora deleniti quaerat ab cupiditate iusto nobis reprehenderit repellat, est cum fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem commodi veniam ullam alias incidunt consectetur, aliquam esse sint tempora deleniti quaerat ab cupiditate iusto nobis reprehenderit repellat, est cum fugit.
-        </p>
+      <p>
+        <a (click)="shareViaWhatsApp(provider)" class="button">
+          Chamar no WhatsApp
+        </a>
+      </p>
+      <br>
+      <p>
+        <a (click)="call(provider)" class="button">
+          Ligar para {{provider?.phone}}
+        </a>
+      </p>
+      <br>
+      <p>
+        {{provider?.description}}
+      </p>
     </div>
-    <a (click)="selectProvider()" class="button sticky">
-        Contratar por R$80,00 →
-    </a>
   </div>
 </ion-content>

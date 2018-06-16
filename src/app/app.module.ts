@@ -2,6 +2,8 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule, Http, XHRBackend, RequestOptions } from '@angular/http';
 import { IonicStorageModule } from '@ionic/storage';
+import { CallNumber } from '@ionic-native/call-number';
+import { SocialSharing } from '@ionic-native/social-sharing';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import {HTTP} from '@ionic-native/http';
@@ -108,7 +110,9 @@ import { CustomHttp } from '../providers/customHttp';
     HttpProvider,
     HttpAngularProvider,
     HttpNativeProvider,
-    CustomHttp
+    CustomHttp,
+    CallNumber,
+    SocialSharing
   ]
 })
 export class AppModule {}

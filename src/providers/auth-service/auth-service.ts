@@ -43,7 +43,7 @@ export class AuthServiceProvider {
           }
 
           settings.auth.session = session;
-          settings.auth.user = r.body.data;
+          settings.auth.user = r.body.data.user;
 
           this.storage.set('settings', settings).then(() => {
             configs.settings = settings;
@@ -51,7 +51,6 @@ export class AuthServiceProvider {
           }).catch(reject);
 
         }).catch(reject);
-        resolve(r.body);
       }).catch(reject);
     });
   }

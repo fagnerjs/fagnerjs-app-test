@@ -47,6 +47,8 @@ export class MyApp {
 
       const perform = () => {
 
+        console.log(configs)
+
         // inexistent session
         if(!configs.settings.auth.session) {
           this.rootPage = SigninPage;
@@ -86,6 +88,7 @@ export class MyApp {
           this.storage.set('settings', configs.settings).then(() => perform());
           return;
         }
+        console.log('app:start',settings)
         configs.settings = settings;
         perform();
       });

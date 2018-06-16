@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, Loading, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, Loading, AlertController, Platform } from 'ionic-angular';
 
 import { MenuPage } from '../menu/menu';
 import { ProviderProfilePage } from '../provider-profile/provider-profile';
 import { UsersServiceProvider } from '../../providers/users-service/users-service';
 
+import { CallNumber } from '@ionic-native/call-number';
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 @IonicPage()
 @Component({
@@ -37,7 +39,10 @@ export class ServiceProviderPage {
     public navParams: NavParams,
     private loadingCtrl: LoadingController,
     private alertCtrl: AlertController,
-    private userService: UsersServiceProvider
+    private userService: UsersServiceProvider,
+    private callNumber: CallNumber,
+    private platform: Platform,
+    private socialSharing: SocialSharing
   ) {
     this.value = this.navParams.data;
   }
@@ -55,6 +60,41 @@ export class ServiceProviderPage {
       provider: id,
       service_params: this.value
     })
+  }
+
+  selectContact(type:string, provider:any) {
+    switch(type) {
+      case 'whatsapp':
+        this.shareViaWhatsApp(provider);
+        break;
+      default:
+        this.call(provider);
+    }
+  }
+
+  shareViaWhatsApp(item:any):void {
+    if(this.platform.is('ios') || this.platform.is('android')) {
+      this.socialSharing.shareViaWhatsAppToReceiver(item.phone, 'Olá, te vi no uberservice. Queria contratar seu serviço', null, null).then(() => {
+        // métricas whatsapp
+      });
+    }
+  }
+
+  call(item:any): void {
+    if(this.platform.is('ios') || this.platform.is('android')) {
+      this.callNumber.isCallSupported()
+        .then(function (response) {
+            if (response == true) {
+              this.callNumber.callNumber(item.phone, true)
+                .then(res => {
+                  // métricas de click no telefone
+                })
+                .catch(err => {
+
+                });
+            }
+        });
+    }
   }
 
   navigateToMenu(): void {

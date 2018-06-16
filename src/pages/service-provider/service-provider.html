@@ -50,12 +50,16 @@
               </p>
               <ion-row>
                 <ion-col col-6>
-                  <a (click)="selectProvider()" class="button secondary">
+                  <a (click)="selectProvider(item)" class="button secondary">
                     Ver perfil
                   </a>
                 </ion-col>
                 <ion-col col-6>
-                  <a (click)="selectProvider()" class="button">
+                  <ion-select interface="action-sheet" cancelText="Fechar">
+                    <ion-option (ionSelect)="selectContact($event, item)" value="whatsapp">Chamar no WhatsApp</ion-option>
+                    <ion-option (ionSelect)="selectContact($event, item)" value="phone">Ligar para {{item?.phone}}</ion-option>
+                  </ion-select>
+                  <a (click)="void" class="button">
                     Entrar em contato
                   </a>
                 </ion-col>

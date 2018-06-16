@@ -67,7 +67,6 @@ export class LoginPage {
       .then(result => {
         this.loading.dismiss().then(() => this.navCtrl.setRoot(SelectServicePage));
       }).catch(err => {
-        console.log(err)
         this.loading.dismiss().then(() => {
           const alert = this.alertCtrl.create({
             title: err.status === 401 ? 'Não autorizado' : 'Falha no login',

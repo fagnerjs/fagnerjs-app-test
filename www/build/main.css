@@ -49178,3 +49178,13 @@ page-service-provider .card .content .button.secondary {
   box-shadow: none;
   height: 46px;
 }
+
+page-service-provider ion-select {
+  display: block;
+  width: 100%;
+  margin: 0;
+  max-width: 100%;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+}

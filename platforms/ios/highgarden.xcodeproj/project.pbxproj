@@ -55,6 +55,13 @@
 		31674E82B4B749A78821455B /* SQLitePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = E58EE96B9D0B48C4B1052A3A /* SQLitePlugin.m */; };
 		2DE36BABBAB34778BD3AED3C /* PSPDFThreadSafeMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = BE11A0B5BCF24E338D826370 /* PSPDFThreadSafeMutableDictionary.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		7F88B90CB04E4AF199C19E73 /* sqlite3.c in Resources */ = {isa = PBXBuildFile; fileRef = A7A9756CB50441FA9DF5A694 /* sqlite3.c */; settings = {COMPILER_FLAGS = "-w -DSQLITE_THREADSAFE=1 -DSQLITE_DEFAULT_SYNCHRONOUS=3 -DSQLITE_DEFAULT_MEMSTATUS=0 -DSQLITE_OMIT_DECLTYPE -DSQLITE_OMIT_DEPRECATED -DSQLITE_OMIT_PROGRESS_CALLBACK -DSQLITE_OMIT_SHARED_CACHE -DSQLITE_TEMP_STORE=2 -DSQLITE_OMIT_LOAD_EXTENSION -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_FTS3_PARENTHESIS -DSQLITE_ENABLE_FTS4 -DSQLITE_ENABLE_RTREE -DSQLITE_DEFAULT_PAGE_SIZE=1024 -DSQLITE_DEFAULT_CACHE_SIZE=2000"; }; };
+		F4805C345E124BCBB236C8B3 /* CFCallNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4BD7C4B2D3464189395805 /* CFCallNumber.m */; };
+		A9A53D636229459AA5AF2C60 /* NSString+SSURLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4473E8A56140CE9C6CEE74 /* NSString+SSURLEncoding.m */; };
+		C11C04FAAC8C437DA3A652C3 /* SocialSharing.m in Sources */ = {isa = PBXBuildFile; fileRef = F0A10E03ED274BA5B99EDF18 /* SocialSharing.m */; };
+		F2B4CC7B4578482D943A3A6B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0833473B718241B9B7728F68 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		20CA925840ED442BBB971308 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906CB6AE6AA74E24954237C4 /* MessageUI.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		0A5C3A7914244900B12258A7 /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 121C63C671D04C0E9C4878A9 /* CDVLocation.m */; };
+		277C1B849E794A09ABECA046 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9802AD4710A445B180915AE8 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,6 +179,17 @@
 		2A52DE1B689D489594B1FB1C /* SQLitePlugin.h */ = {isa = PBXFileReference; name = "SQLitePlugin.h"; path = "cordova-sqlite-storage/SQLitePlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		50017109F7A84611B5B7794B /* PSPDFThreadSafeMutableDictionary.h */ = {isa = PBXFileReference; name = "PSPDFThreadSafeMutableDictionary.h"; path = "cordova-sqlite-storage/PSPDFThreadSafeMutableDictionary.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		B87803E2001C4D77A8B9CAEB /* sqlite3.h */ = {isa = PBXFileReference; name = "sqlite3.h"; path = "cordova-sqlite-storage/sqlite3.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		3F4BD7C4B2D3464189395805 /* CFCallNumber.m */ = {isa = PBXFileReference; name = "CFCallNumber.m"; path = "mx.ferreyra.callnumber/CFCallNumber.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		676D4F6B40634AEEB1DF2FC5 /* CFCallNumber.h */ = {isa = PBXFileReference; name = "CFCallNumber.h"; path = "mx.ferreyra.callnumber/CFCallNumber.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		AF4473E8A56140CE9C6CEE74 /* NSString+SSURLEncoding.m */ = {isa = PBXFileReference; name = "NSString+SSURLEncoding.m"; path = "cordova-plugin-x-socialsharing/NSString+SSURLEncoding.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		F0A10E03ED274BA5B99EDF18 /* SocialSharing.m */ = {isa = PBXFileReference; name = "SocialSharing.m"; path = "cordova-plugin-x-socialsharing/SocialSharing.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		2911FBECCE604596ABC46E52 /* NSString+SSURLEncoding.h */ = {isa = PBXFileReference; name = "NSString+SSURLEncoding.h"; path = "cordova-plugin-x-socialsharing/NSString+SSURLEncoding.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		35B75FFC2E5B4A2A9F877AA0 /* SocialSharing.h */ = {isa = PBXFileReference; name = "SocialSharing.h"; path = "cordova-plugin-x-socialsharing/SocialSharing.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		0833473B718241B9B7728F68 /* Social.framework */ = {isa = PBXFileReference; name = "Social.framework"; path = "System/Library/Frameworks/Social.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		906CB6AE6AA74E24954237C4 /* MessageUI.framework */ = {isa = PBXFileReference; name = "MessageUI.framework"; path = "System/Library/Frameworks/MessageUI.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		121C63C671D04C0E9C4878A9 /* CDVLocation.m */ = {isa = PBXFileReference; name = "CDVLocation.m"; path = "cordova-plugin-geolocation/CDVLocation.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		F69DD750A03B40418CD7DF71 /* CDVLocation.h */ = {isa = PBXFileReference; name = "CDVLocation.h"; path = "cordova-plugin-geolocation/CDVLocation.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		9802AD4710A445B180915AE8 /* CoreLocation.framework */ = {isa = PBXFileReference; name = "CoreLocation.framework"; path = "System/Library/Frameworks/CoreLocation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +202,9 @@
 				A1E8D4C1387C40E0860573C1 /* SystemConfiguration.framework in Frameworks */,
 				3B141ABBB7CD4113A6BC1337 /* libz.tbd in Frameworks */,
 				37757BA84BE949F09500870F /* WebKit.framework in Frameworks */,
+				F2B4CC7B4578482D943A3A6B /* Social.framework in Frameworks */,
+				20CA925840ED442BBB971308 /* MessageUI.framework in Frameworks */,
+				277C1B849E794A09ABECA046 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +279,9 @@
 				72F1B2DD00C544B2A4A5065B /* SystemConfiguration.framework */,
 				1E3F2AB098714A73861C13E2 /* libz.tbd */,
 				BD9FC5BA9E1E4C9B9115D2E1 /* WebKit.framework */,
+				0833473B718241B9B7728F68 /* Social.framework */,
+				906CB6AE6AA74E24954237C4 /* MessageUI.framework */,
+				9802AD4710A445B180915AE8 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -356,6 +380,14 @@
 				2A52DE1B689D489594B1FB1C /* SQLitePlugin.h */,
 				50017109F7A84611B5B7794B /* PSPDFThreadSafeMutableDictionary.h */,
 				B87803E2001C4D77A8B9CAEB /* sqlite3.h */,
+				3F4BD7C4B2D3464189395805 /* CFCallNumber.m */,
+				676D4F6B40634AEEB1DF2FC5 /* CFCallNumber.h */,
+				AF4473E8A56140CE9C6CEE74 /* NSString+SSURLEncoding.m */,
+				F0A10E03ED274BA5B99EDF18 /* SocialSharing.m */,
+				2911FBECCE604596ABC46E52 /* NSString+SSURLEncoding.h */,
+				35B75FFC2E5B4A2A9F877AA0 /* SocialSharing.h */,
+				121C63C671D04C0E9C4878A9 /* CDVLocation.m */,
+				F69DD750A03B40418CD7DF71 /* CDVLocation.h */,
 			);
 			name = Plugins;
 			path = "highgarden/Plugins";
@@ -503,6 +535,10 @@
 				31674E82B4B749A78821455B /* SQLitePlugin.m in Sources */,
 				2DE36BABBAB34778BD3AED3C /* PSPDFThreadSafeMutableDictionary.m in Sources */,
 				7F88B90CB04E4AF199C19E73 /* sqlite3.c in Resources */,
+				F4805C345E124BCBB236C8B3 /* CFCallNumber.m in Sources */,
+				A9A53D636229459AA5AF2C60 /* NSString+SSURLEncoding.m in Sources */,
+				C11C04FAAC8C437DA3A652C3 /* SocialSharing.m in Sources */,
+				0A5C3A7914244900B12258A7 /* CDVLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
