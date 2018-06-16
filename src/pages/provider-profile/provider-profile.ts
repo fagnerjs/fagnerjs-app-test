@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, Loading, AlertController, Platform } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
 
 import { CallNumber } from '@ionic-native/call-number';
 import { SocialSharing } from '@ionic-native/social-sharing';
 
-import { MenuPage } from '../menu/menu';
 import { ProviderSchedulePage } from '../provider-schedule/provider-schedule';
 
 @IonicPage()
@@ -31,8 +30,6 @@ export class ProviderProfilePage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    private loadingCtrl: LoadingController,
-    private alertCtrl: AlertController,
     private callNumber: CallNumber,
     private platform: Platform,
     private socialSharing: SocialSharing

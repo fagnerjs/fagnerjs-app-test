@@ -5,5 +5,6 @@ export default {
       session: null,
       user: null
     }
-  }
+  },
+  location: {latitude: null, longitude: null}
 }

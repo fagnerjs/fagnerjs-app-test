@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, Loading, AlertController } from 'ionic-angular';
-import { FormBuilder, FormArray, FormGroup, Validators, FormControl } from '@angular/forms';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { PasswordPage } from '../password/password';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
@@ -17,7 +17,6 @@ export class SignupPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     private formBuilder: FormBuilder,
-    private loadingCtrl: LoadingController,
     private alertCtrl: AlertController,
     private auth: AuthServiceProvider
   ) {

@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, Loading, AlertController } from 'ionic-angular';
-import { FormBuilder, FormArray, FormGroup, Validators, FormControl, AbstractControl } from '@angular/forms';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import { MenuPage } from '../menu/menu';
 import { ProviderPlacePage } from '../provider-place/provider-place';
 
 @IonicPage()
@@ -17,7 +16,6 @@ export class ProviderSchedulePage {
     public navCtrl: NavController,
     public navParams: NavParams,
     private formBuilder: FormBuilder,
-    private loadingCtrl: LoadingController,
     private alertCtrl: AlertController
   ) {
     this.form = this.formBuilder.group({
@@ -37,7 +35,6 @@ export class ProviderSchedulePage {
   }
 
   submit():void {
-    const controls = this.form.controls;
     if(!this.form.valid) {
       const alert = this.alertCtrl.create({
         title: 'Preencha o dia e horário',

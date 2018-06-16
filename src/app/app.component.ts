@@ -2,10 +2,10 @@ import { Component, ViewChild } from '@angular/core';
 import { Platform, NavController, ModalController, MenuController, AlertController, LoadingController, Loading, Events } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { Geolocation } from '@ionic-native/geolocation';
 import * as moment from 'moment';
 
 import { SigninPage } from '../pages/signin/signin';
-import { LoginPage } from '../pages/login/login';
 import { SelectServicePage } from '../pages/select-service/select-service';
 
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
@@ -21,6 +21,7 @@ export class MyApp {
   rootPage:any
   loading: Loading;
   current: string;
+  initiated: boolean = false;
 
   menuItems=[];
 
@@ -34,7 +35,8 @@ export class MyApp {
     private auth: AuthServiceProvider,
     private loadingCtrl: LoadingController,
     public events: Events,
-    public menuCtrl: MenuController
+    public menuCtrl: MenuController,
+    private geolocation: Geolocation
   ) {
 
     platform.ready().then(() => {
@@ -46,8 +48,7 @@ export class MyApp {
       moment.locale('pt-BR');
 
       const perform = () => {
-
-        console.log(configs)
+        this.initiated = true;
 
         // inexistent session
         if(!configs.settings.auth.session) {
@@ -83,16 +84,35 @@ export class MyApp {
         });
       }
 
-      this.storage.get('settings').then(settings => {
-        if(!settings) {
-          this.storage.set('settings', configs.settings).then(() => perform());
+      this.geolocation.watchPosition().subscribe((data) => {
+        configs.location.latitude = data.coords.latitude;
+        configs.location.longitude = data.coords.longitude;
+
+        if(this.initiated) {
           return;
         }
-        console.log('app:start',settings)
-        configs.settings = settings;
-        perform();
-      });
 
+        this.storage.get('settings').then(settings => {
+          if(!settings) {
+            this.storage.set('settings', configs.settings).then(() => perform());
+            return;
+          }
+          configs.settings = settings;
+          perform();
+        });
+      }, err => {
+        const alert = this.alertCtrl.create({
+          title:  'Falha ao obter sua localização',
+          subTitle: 'Não foi possível obter sua localização. Certifique-se de que seu GPS está ativado',
+          buttons: [
+            {
+              text: 'Ok',
+              handler: () => {}
+            }
+          ]
+        });
+        alert.present();
+      });
       // const splash = modalCtrl.create(SplashPage);
       // splash.present();
     });

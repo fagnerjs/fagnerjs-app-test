@@ -8,6 +8,6 @@ import { HttpNativeProvider } from './http-native';
 export class HttpProvider {
     public http;
     constructor(private platform: Platform, private angularHttp: HttpAngularProvider, private nativeHttp: HttpNativeProvider) {
-      this.http = this.platform.is('ios') || this.platform.is('android') ? nativeHttp : angularHttp;
+      this.http = this.platform.is('ios') || this.platform.is('android') ? this.nativeHttp : this.angularHttp;
     }
 }

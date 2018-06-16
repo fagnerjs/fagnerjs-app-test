@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, Loading, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { MenuPage } from '../menu/menu';
 import { ServiceProviderPage } from '../service-provider/service-provider';
@@ -13,9 +13,7 @@ export class ServiceSchedulePage {
   value: any;
   constructor(
     public navCtrl: NavController,
-    public navParams: NavParams,
-    private loadingCtrl: LoadingController,
-    private alertCtrl: AlertController
+    public navParams: NavParams
   ) {
     this.value = this.navParams.data;
   }

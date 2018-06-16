@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, ModalController, Loading, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 
 import { MenuPage } from '../menu/menu';
 import { ServiceHiredProfilePage } from '../service-hired-profile/service-hired-profile';
@@ -19,8 +19,6 @@ export class SelectServicePage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    private loadingCtrl: LoadingController,
-    private alertCtrl: AlertController,
     private modalCtrl: ModalController
   ) {}
 

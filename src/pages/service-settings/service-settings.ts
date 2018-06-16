@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, Loading, AlertController } from 'ionic-angular';
-import { FormBuilder, FormArray, FormGroup, Validators, FormControl, AbstractControl } from '@angular/forms';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { MenuPage } from '../menu/menu';
 import { ServiceSchedulePage } from '../service-schedule/service-schedule';
@@ -16,7 +16,6 @@ export class ServiceSettingsPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    private loadingCtrl: LoadingController,
     private alertCtrl: AlertController,
     private formBuilder: FormBuilder,
 
@@ -39,8 +38,6 @@ export class ServiceSettingsPage {
   }
 
   submit() {
-    const controls = this.form.controls;
-
     if(!this.form.valid) {
       const alert = this.alertCtrl.create({
         title: 'Por favor, selecione os detalhes do local',

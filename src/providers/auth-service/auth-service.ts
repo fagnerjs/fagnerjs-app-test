@@ -1,4 +1,4 @@
-import { Injectable, ReflectiveInjector } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { CustomHttp } from '../customHttp';
 import { Storage } from '@ionic/storage';
 
@@ -7,8 +7,6 @@ import configs from '../../app/config';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
-import config from '../../app/config';
-import { PromiseObservable } from 'rxjs/observable/PromiseObservable';
 
 @Injectable()
 export class AuthServiceProvider {

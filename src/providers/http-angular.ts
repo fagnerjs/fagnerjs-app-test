@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Http, RequestOptions, ResponseContentType, URLSearchParams, Headers, Response, RequestOptionsArgs} from '@angular/http';
+import {Http, RequestOptions, URLSearchParams, Headers, RequestOptionsArgs} from '@angular/http';
 
 import configs from '../app/config';
 
@@ -33,7 +33,6 @@ export class HttpAngularProvider {
 
     public delete(url, params: any, options: any = {}) {
       const requestOptions = this.getRequestOptionArgs(options);
-      const body = this.createSearchParams(params);
       return this.http.delete(url, requestOptions)
         .map(resp => this.parseResult(resp, options)).toPromise();
     }

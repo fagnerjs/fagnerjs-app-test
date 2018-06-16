@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, Loading, AlertController, Platform } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
 
 import { MenuPage } from '../menu/menu';
 import { ProviderProfilePage } from '../provider-profile/provider-profile';
@@ -7,6 +7,7 @@ import { UsersServiceProvider } from '../../providers/users-service/users-servic
 
 import { CallNumber } from '@ionic-native/call-number';
 import { SocialSharing } from '@ionic-native/social-sharing';
+import config from '../../app/config';
 
 @IonicPage()
 @Component({
@@ -37,8 +38,6 @@ export class ServiceProviderPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    private loadingCtrl: LoadingController,
-    private alertCtrl: AlertController,
     private userService: UsersServiceProvider,
     private callNumber: CallNumber,
     private platform: Platform,
@@ -48,7 +47,7 @@ export class ServiceProviderPage {
   }
 
   ionViewDidLoad(): void {
-    this.userService.searchByGeo({geo:'-23.535809, -46.651249'}).then(result => {
+    this.userService.searchByGeo({geo:`${config.location.latitude},${config.location.longitude}`}).then(result => {
       this.providers = result.body;
     }).catch(err => {
       this.providers = JSON.parse(JSON.stringify(this.providersModel));

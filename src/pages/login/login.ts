@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, Loading, AlertController } from 'ionic-angular';
-import { FormBuilder, FormArray, FormGroup, Validators, FormControl } from '@angular/forms';
+import { IonicPage, NavController, NavParams, LoadingController, AlertController, Loading } from 'ionic-angular';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { SelectServicePage } from '../select-service/select-service';
-import { SigninPage } from '../signin/signin';
-import { PasswordPage } from '../password/password';
 
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 
@@ -21,8 +19,8 @@ export class LoginPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     private formBuilder: FormBuilder,
-    private loadingCtrl: LoadingController,
     private alertCtrl: AlertController,
+    private loadingCtrl: LoadingController,
     private auth: AuthServiceProvider
   ) {
     this.form = this.formBuilder.group({
