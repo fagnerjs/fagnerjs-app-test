@@ -285,6 +285,14 @@ module.exports = [
         "clobbers": [
             "window.plugins.socialsharing"
         ]
+    },
+    {
+        "file": "plugins/cordova-open-native-settings/www/settings.js",
+        "id": "cordova-open-native-settings.Settings",
+        "pluginId": "cordova-open-native-settings",
+        "clobbers": [
+            "cordova.plugins.settings"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -301,7 +309,9 @@ module.exports.metadata =
     "mx.ferreyra.callnumber": "0.0.2",
     "es6-promise-plugin": "4.2.2",
     "cordova-plugin-x-socialsharing": "5.4.0",
-    "cordova-plugin-geolocation": "4.0.1"
+    "cordova-plugin-geolocation": "4.0.1",
+    "cordova.plugins.diagnostic": "4.0.8",
+    "cordova-open-native-settings": "1.5.1"
 }
 // BOTTOM OF METADATA
 });

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
-
+import { IonicPage, NavController, NavParams, ModalController, AlertController } from 'ionic-angular';
+import { Diagnostic } from '@ionic-native/diagnostic';
+import { OpenNativeSettings } from '@ionic-native/open-native-settings';
 import { MenuPage } from '../menu/menu';
 import { ServiceHiredProfilePage } from '../service-hired-profile/service-hired-profile';
 
@@ -25,30 +26,82 @@ export class SelectServicePage {
     public navParams: NavParams,
     private modalCtrl: ModalController,
     private geolocation : Geolocation,
-    private storage: Storage
+    private storage: Storage,
+    private alertCtrl: AlertController,
+    private diagnostic: Diagnostic,
+    private openSettings: OpenNativeSettings
   ) {}
 
   ionViewDidLoad() {
-    this.geolocation
-      .watchPosition({enableHighAccuracy : true})
-      .subscribe((data) => {
-        configs.location.latitude = data.coords.latitude;
-        configs.location.longitude = data.coords.longitude;
-
-        if(!this.initiate) {
-          return
-        }
-
-        this.storage.get('settings').then(settings => {
-          if(!settings) {
-            this.storage.set('settings', configs.settings).then(() => {});
-            return;
-          }
-          configs.settings = settings;
-          this.initiate = true;
+    this.diagnostic.isLocationEnabled().then(state => {
+      if(!state) {
+        const alert = this.alertCtrl.create({
+          title:  'Localização Desabilitada',
+          subTitle: 'Parece que o serviço de localização está desabilitado. Habilite para que possamos localizar os melhores serviços para você.',
+          buttons: [
+            {
+              text: 'Cancelar',
+              handler: () => {
+                //this.openSettings.open('location')
+              }
+            },
+            {
+              text: 'Habilitar',
+              handler: () => {
+                this.openSettings.open('location')
+              }
+            }
+          ]
         });
-      }, err => {
+        alert.present();
+        return;
+      }
+      this.geolocation
+        .watchPosition({enableHighAccuracy : true})
+        .subscribe((data) => {
+          configs.location.latitude = data.coords.latitude;
+          configs.location.longitude = data.coords.longitude;
+
+          if(!this.initiate) {
+            return
+          }
+
+          this.storage.get('settings').then(settings => {
+            if(!settings) {
+              this.storage.set('settings', configs.settings).then(() => {});
+              return;
+            }
+            configs.settings = settings;
+            this.initiate = true;
+          });
+        }, err => {
+          const alert = this.alertCtrl.create({
+            title:  'Erro',
+            subTitle: 'Erro ao obter a localização',
+            buttons: [
+              {
+                text: 'Ok',
+                handler: () => {
+                }
+              }
+            ]
+          });
+          alert.present();
+        });
+    }).catch(err => {
+      const alert = this.alertCtrl.create({
+        title:  'Erro',
+        subTitle: 'err.message',
+        buttons: [
+          {
+            text: 'Ok',
+            handler: () => {
+            }
+          }
+        ]
       });
+      alert.present();
+    });
   }
 
   navigateToServices(param: boolean): void {

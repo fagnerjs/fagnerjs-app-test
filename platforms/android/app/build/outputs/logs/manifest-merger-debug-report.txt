@@ -11,15 +11,24 @@ INJECTED from /export/uberservice/app/platforms/android/app/src/main/AndroidMani
 	android:name
 		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:17:135-183
 manifest
-ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:2:1-29:12
-INJECTED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:2:1-29:12
-INJECTED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:2:1-29:12
-INJECTED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:2:1-29:12
-MERGED from [com.android.support:support-v4:24.1.1] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-v4-24.1.1.aar/7140ae1b476b5199ba95cca9af90a443/AndroidManifest.xml:17:1-27:12
+ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:2:1-30:12
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f222a5cc2ab8afaa30fbf03a9b7d8b5c/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-v4:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/8936d9865c119cae3cd788ab7e78e224/AndroidManifest.xml:17:1-31:12
 MERGED from [:CordovaLib] /export/uberservice/app/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:20:1-27:12
-INJECTED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:2:1-29:12
-INJECTED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:2:1-29:12
-INJECTED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:2:1-29:12
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/39bd3a851ece50a4b660a47877a32d48/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/1bd3e77cf0b74cb5518bf1176504adcb/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-fragment:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/c9fe95a38dc2ff5abf06ddda96bee335/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/e9f6c36dfd98646cd79971fc47421a0c/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/cefaae6a4b1375301f66d7d4f1d819c6/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/a63d8a1a592cf0cc1608ed9fe6bc2c2b/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/346f412ae5ff4a87ffa980e7ace6fcc4/AndroidManifest.xml:17:1-31:12
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/288b07acfb592d31534009ef7e040646/AndroidManifest.xml:17:1-30:12
+INJECTED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:2:1-30:12
 	package
 		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:2:98-124
 		INJECTED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml
@@ -56,8 +65,26 @@ ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifes
 		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:4:22-64
 application
 ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:5:5-20:19
-MERGED from [com.android.support:support-v4:24.1.1] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-v4-24.1.1.aar/7140ae1b476b5199ba95cca9af90a443/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-v4:24.1.1] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-v4-24.1.1.aar/7140ae1b476b5199ba95cca9af90a443/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f222a5cc2ab8afaa30fbf03a9b7d8b5c/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f222a5cc2ab8afaa30fbf03a9b7d8b5c/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/8936d9865c119cae3cd788ab7e78e224/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/8936d9865c119cae3cd788ab7e78e224/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/39bd3a851ece50a4b660a47877a32d48/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/39bd3a851ece50a4b660a47877a32d48/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/1bd3e77cf0b74cb5518bf1176504adcb/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/1bd3e77cf0b74cb5518bf1176504adcb/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-fragment:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/c9fe95a38dc2ff5abf06ddda96bee335/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/c9fe95a38dc2ff5abf06ddda96bee335/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/e9f6c36dfd98646cd79971fc47421a0c/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/e9f6c36dfd98646cd79971fc47421a0c/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/cefaae6a4b1375301f66d7d4f1d819c6/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/cefaae6a4b1375301f66d7d4f1d819c6/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/a63d8a1a592cf0cc1608ed9fe6bc2c2b/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/a63d8a1a592cf0cc1608ed9fe6bc2c2b/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/346f412ae5ff4a87ffa980e7ace6fcc4/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/346f412ae5ff4a87ffa980e7ace6fcc4/AndroidManifest.xml:25:5-29:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/288b07acfb592d31534009ef7e040646/AndroidManifest.xml:24:5-28:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/288b07acfb592d31534009ef7e040646/AndroidManifest.xml:24:5-28:19
 	android:supportsRtl
 		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:5:114-140
 	android:label
@@ -106,12 +133,30 @@ ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifes
 		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:14:25-66
 uses-sdk
 ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:21:5-74
-MERGED from [com.android.support:support-v4:24.1.1] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-v4-24.1.1.aar/7140ae1b476b5199ba95cca9af90a443/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-v4:24.1.1] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-v4-24.1.1.aar/7140ae1b476b5199ba95cca9af90a443/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f222a5cc2ab8afaa30fbf03a9b7d8b5c/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f222a5cc2ab8afaa30fbf03a9b7d8b5c/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/8936d9865c119cae3cd788ab7e78e224/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/8936d9865c119cae3cd788ab7e78e224/AndroidManifest.xml:21:5-23:54
 MERGED from [:CordovaLib] /export/uberservice/app/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:25:5-44
 MERGED from [:CordovaLib] /export/uberservice/app/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:25:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/39bd3a851ece50a4b660a47877a32d48/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/39bd3a851ece50a4b660a47877a32d48/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/1bd3e77cf0b74cb5518bf1176504adcb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/1bd3e77cf0b74cb5518bf1176504adcb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/c9fe95a38dc2ff5abf06ddda96bee335/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/c9fe95a38dc2ff5abf06ddda96bee335/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/e9f6c36dfd98646cd79971fc47421a0c/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/e9f6c36dfd98646cd79971fc47421a0c/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/cefaae6a4b1375301f66d7d4f1d819c6/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/cefaae6a4b1375301f66d7d4f1d819c6/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/a63d8a1a592cf0cc1608ed9fe6bc2c2b/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/a63d8a1a592cf0cc1608ed9fe6bc2c2b/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/346f412ae5ff4a87ffa980e7ace6fcc4/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/346f412ae5ff4a87ffa980e7ace6fcc4/AndroidManifest.xml:21:5-23:58
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/288b07acfb592d31534009ef7e040646/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/288b07acfb592d31534009ef7e040646/AndroidManifest.xml:20:5-22:41
 	tools:overrideLibrary
-		ADDED from [com.android.support:support-v4:24.1.1] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-v4-24.1.1.aar/7140ae1b476b5199ba95cca9af90a443/AndroidManifest.xml:23:9-51
+		ADDED from [com.android.support:appcompat-v7:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f222a5cc2ab8afaa30fbf03a9b7d8b5c/AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
 		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:21:42-71
 	android:minSdkVersion
@@ -146,9 +191,41 @@ uses-permission#android.permission.ACCESS_LOCATION_EXTRA_COMMANDS
 ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:28:5-89
 	android:name
 		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:28:22-86
+uses-permission#android.permission.BLUETOOTH
+ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:29:5-68
+	android:name
+		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:29:22-65
 meta-data#android.support.FILE_PROVIDER_PATHS
 ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:18:13-115
 	android:resource
 		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:18:75-112
 	android:name
 		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:18:24-74
+meta-data#android.support.VERSION
+ADDED from [com.android.support:appcompat-v7:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f222a5cc2ab8afaa30fbf03a9b7d8b5c/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/8936d9865c119cae3cd788ab7e78e224/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/8936d9865c119cae3cd788ab7e78e224/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/39bd3a851ece50a4b660a47877a32d48/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/39bd3a851ece50a4b660a47877a32d48/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/1bd3e77cf0b74cb5518bf1176504adcb/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/1bd3e77cf0b74cb5518bf1176504adcb/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-fragment:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/c9fe95a38dc2ff5abf06ddda96bee335/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/c9fe95a38dc2ff5abf06ddda96bee335/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/e9f6c36dfd98646cd79971fc47421a0c/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/e9f6c36dfd98646cd79971fc47421a0c/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/cefaae6a4b1375301f66d7d4f1d819c6/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/cefaae6a4b1375301f66d7d4f1d819c6/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/a63d8a1a592cf0cc1608ed9fe6bc2c2b/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/a63d8a1a592cf0cc1608ed9fe6bc2c2b/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/346f412ae5ff4a87ffa980e7ace6fcc4/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/346f412ae5ff4a87ffa980e7ace6fcc4/AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:appcompat-v7:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f222a5cc2ab8afaa30fbf03a9b7d8b5c/AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:appcompat-v7:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f222a5cc2ab8afaa30fbf03a9b7d8b5c/AndroidManifest.xml:27:13-51
+meta-data#android.arch.lifecycle.VERSION
+ADDED from [android.arch.lifecycle:runtime:1.0.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/288b07acfb592d31534009ef7e040646/AndroidManifest.xml:25:9-27:47
+	android:value
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/288b07acfb592d31534009ef7e040646/AndroidManifest.xml:27:13-44
+	android:name
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/288b07acfb592d31534009ef7e040646/AndroidManifest.xml:26:13-58
