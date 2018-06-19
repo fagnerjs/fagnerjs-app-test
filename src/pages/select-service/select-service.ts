@@ -21,6 +21,7 @@ import { ServiceProviderPage } from '../service-provider/service-provider';
 })
 export class SelectServicePage {
   initiate: boolean = false;
+  subscription: any;
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
@@ -42,13 +43,18 @@ export class SelectServicePage {
             {
               text: 'Cancelar',
               handler: () => {
-                //this.openSettings.open('location')
+                this.diagnostic.registerLocationStateChangeHandler(() => {
+                  this.getPosition();
+                })
               }
             },
             {
               text: 'Habilitar',
               handler: () => {
-                this.openSettings.open('location')
+                this.diagnostic.registerLocationStateChangeHandler(() => {
+                  this.getPosition();
+                })
+                this.openSettings.open('location');
               }
             }
           ]
@@ -56,52 +62,47 @@ export class SelectServicePage {
         alert.present();
         return;
       }
-      this.geolocation
-        .watchPosition({enableHighAccuracy : true})
-        .subscribe((data) => {
-          configs.location.latitude = data.coords.latitude;
-          configs.location.longitude = data.coords.longitude;
+      this.getPosition();
+    }).catch(err => {});
+  }
 
-          if(!this.initiate) {
-            return
+  getPosition() {
+    if(this.subscription) {
+      this.subscription.unsubscribe();
+    }
+    this.subscription = this.geolocation
+      .watchPosition({enableHighAccuracy : true})
+      .subscribe((data) => {
+
+        configs.location.latitude = data.coords.latitude;
+        configs.location.longitude = data.coords.longitude;
+
+        if(!this.initiate) {
+          return
+        }
+
+        this.storage.get('settings').then(settings => {
+          if(!settings) {
+            this.storage.set('settings', configs.settings).then(() => {});
+            return;
           }
-
-          this.storage.get('settings').then(settings => {
-            if(!settings) {
-              this.storage.set('settings', configs.settings).then(() => {});
-              return;
-            }
-            configs.settings = settings;
-            this.initiate = true;
-          });
-        }, err => {
-          const alert = this.alertCtrl.create({
-            title:  'Erro',
-            subTitle: 'Erro ao obter a localização',
-            buttons: [
-              {
-                text: 'Ok',
-                handler: () => {
-                }
-              }
-            ]
-          });
-          alert.present();
+          configs.settings = settings;
+          this.initiate = true;
         });
-    }).catch(err => {
-      const alert = this.alertCtrl.create({
-        title:  'Erro',
-        subTitle: 'err.message',
-        buttons: [
-          {
-            text: 'Ok',
-            handler: () => {
+      }, err => {
+        const alert = this.alertCtrl.create({
+          title:  'Erro',
+          subTitle: 'Erro ao obter a localização',
+          buttons: [
+            {
+              text: 'Ok',
+              handler: () => {
+              }
             }
-          }
-        ]
+          ]
+        });
+        alert.present();
       });
-      alert.present();
-    });
   }
 
   navigateToServices(param: boolean): void {

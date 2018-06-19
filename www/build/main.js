@@ -1041,11 +1041,11 @@ var map = {
 		18
 	],
 	"../pages/after-hire/after-hire.module": [
-		447,
+		448,
 		17
 	],
 	"../pages/login/login.module": [
-		448,
+		447,
 		16
 	],
 	"../pages/menu/menu.module": [
@@ -1057,11 +1057,11 @@ var map = {
 		14
 	],
 	"../pages/provider-place/provider-place.module": [
-		451,
+		452,
 		13
 	],
 	"../pages/provider-profile/provider-profile.module": [
-		452,
+		451,
 		12
 	],
 	"../pages/provider-schedule/provider-schedule.module": [
@@ -1089,11 +1089,11 @@ var map = {
 		6
 	],
 	"../pages/service-provider/service-provider.module": [
-		459,
+		460,
 		5
 	],
 	"../pages/service-schedule/service-schedule.module": [
-		460,
+		459,
 		4
 	],
 	"../pages/service-settings/service-settings.module": [
@@ -1436,12 +1436,17 @@ var SelectServicePage = /** @class */ (function () {
                         {
                             text: 'Cancelar',
                             handler: function () {
-                                //this.openSettings.open('location')
+                                _this.diagnostic.registerLocationStateChangeHandler(function () {
+                                    _this.getPosition();
+                                });
                             }
                         },
                         {
                             text: 'Habilitar',
                             handler: function () {
+                                _this.diagnostic.registerLocationStateChangeHandler(function () {
+                                    _this.getPosition();
+                                });
                                 _this.openSettings.open('location');
                             }
                         }
@@ -1450,40 +1455,34 @@ var SelectServicePage = /** @class */ (function () {
                 alert_1.present();
                 return;
             }
-            _this.geolocation
-                .watchPosition({ enableHighAccuracy: true })
-                .subscribe(function (data) {
-                __WEBPACK_IMPORTED_MODULE_8__app_config__["a" /* default */].location.latitude = data.coords.latitude;
-                __WEBPACK_IMPORTED_MODULE_8__app_config__["a" /* default */].location.longitude = data.coords.longitude;
-                if (!_this.initiate) {
+            _this.getPosition();
+        }).catch(function (err) { });
+    };
+    SelectServicePage.prototype.getPosition = function () {
+        var _this = this;
+        if (this.subscription) {
+            this.subscription.unsubscribe();
+        }
+        this.subscription = this.geolocation
+            .watchPosition({ enableHighAccuracy: true })
+            .subscribe(function (data) {
+            __WEBPACK_IMPORTED_MODULE_8__app_config__["a" /* default */].location.latitude = data.coords.latitude;
+            __WEBPACK_IMPORTED_MODULE_8__app_config__["a" /* default */].location.longitude = data.coords.longitude;
+            if (!_this.initiate) {
+                return;
+            }
+            _this.storage.get('settings').then(function (settings) {
+                if (!settings) {
+                    _this.storage.set('settings', __WEBPACK_IMPORTED_MODULE_8__app_config__["a" /* default */].settings).then(function () { });
                     return;
                 }
-                _this.storage.get('settings').then(function (settings) {
-                    if (!settings) {
-                        _this.storage.set('settings', __WEBPACK_IMPORTED_MODULE_8__app_config__["a" /* default */].settings).then(function () { });
-                        return;
-                    }
-                    __WEBPACK_IMPORTED_MODULE_8__app_config__["a" /* default */].settings = settings;
-                    _this.initiate = true;
-                });
-            }, function (err) {
-                var alert = _this.alertCtrl.create({
-                    title: 'Erro',
-                    subTitle: 'Erro ao obter a localização',
-                    buttons: [
-                        {
-                            text: 'Ok',
-                            handler: function () {
-                            }
-                        }
-                    ]
-                });
-                alert.present();
+                __WEBPACK_IMPORTED_MODULE_8__app_config__["a" /* default */].settings = settings;
+                _this.initiate = true;
             });
-        }).catch(function (err) {
+        }, function (err) {
             var alert = _this.alertCtrl.create({
                 title: 'Erro',
-                subTitle: 'err.message',
+                subTitle: 'Erro ao obter a localização',
                 buttons: [
                     {
                         text: 'Ok',
@@ -2016,20 +2015,20 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_9_ionic_angular__["e" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_10__app_component__["a" /* MyApp */], {}, {
                     links: [
                         { loadChildren: '../pages/acquired-services/acquired-services.module#AcquiredServicesPageModule', name: 'AcquiredServicesPage', segment: 'acquired-services', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/after-hire/after-hire.module#AfterHirePageModule', name: 'AfterHirePage', segment: 'after-hire', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/after-hire/after-hire.module#AfterHirePageModule', name: 'AfterHirePage', segment: 'after-hire', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/menu/menu.module#MenuPageModule', name: 'MenuPage', segment: 'menu', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/password/password.module#PasswordPageModule', name: 'PasswordPage', segment: 'password', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/provider-place/provider-place.module#ProviderPlacePageModule', name: 'ProviderPlacePage', segment: 'provider-place', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/provider-profile/provider-profile.module#ProviderProfilePageModule', name: 'ProviderProfilePage', segment: 'provider-profile', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/provider-place/provider-place.module#ProviderPlacePageModule', name: 'ProviderPlacePage', segment: 'provider-place', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/provider-schedule/provider-schedule.module#ProviderSchedulePageModule', name: 'ProviderSchedulePage', segment: 'provider-schedule', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/select-service/select-service.module#SelectServicePageModule', name: 'SelectServicePage', segment: 'select-service', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/service-cancel/service-cancel.module#ServiceCancelPageModule', name: 'ServiceCancelPage', segment: 'service-cancel', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/service-hired-profile/service-hired-profile.module#ServiceHiredProfilePageModule', name: 'ServiceHiredProfilePage', segment: 'service-hired-profile', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/service-hired/service-hired.module#ServiceHiredPageModule', name: 'ServiceHiredPage', segment: 'service-hired', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/service-provider-rate/service-provider-rate.module#ServiceProviderRatePageModule', name: 'ServiceProviderRatePage', segment: 'service-provider-rate', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/service-provider/service-provider.module#ServiceProviderPageModule', name: 'ServiceProviderPage', segment: 'service-provider', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/service-schedule/service-schedule.module#ServiceSchedulePageModule', name: 'ServiceSchedulePage', segment: 'service-schedule', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/service-provider/service-provider.module#ServiceProviderPageModule', name: 'ServiceProviderPage', segment: 'service-provider', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/service-settings/service-settings.module#ServiceSettingsPageModule', name: 'ServiceSettingsPage', segment: 'service-settings', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/service-summary/service-summary.module#ServiceSummaryPageModule', name: 'ServiceSummaryPage', segment: 'service-summary', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/signin/signin.module#SigninPageModule', name: 'SigninPage', segment: 'signin', priority: 'low', defaultHistory: [] },
