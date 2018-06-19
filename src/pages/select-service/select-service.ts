@@ -4,6 +4,10 @@ import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angu
 import { MenuPage } from '../menu/menu';
 import { ServiceHiredProfilePage } from '../service-hired-profile/service-hired-profile';
 
+import { Geolocation } from '@ionic-native/geolocation';
+import { Storage } from '@ionic/storage';
+import configs from '../../app/config';
+
 // No modo completo, ira direcionar pra ServiceSettings
 //import { ServiceSettingsPage } from '../service-settings/service-settings';
 
@@ -15,14 +19,36 @@ import { ServiceProviderPage } from '../service-provider/service-provider';
   templateUrl: 'select-service.html',
 })
 export class SelectServicePage {
-
+  initiate: boolean = false;
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    private modalCtrl: ModalController
+    private modalCtrl: ModalController,
+    private geolocation : Geolocation,
+    private storage: Storage
   ) {}
 
   ionViewDidLoad() {
+    this.geolocation
+      .watchPosition({enableHighAccuracy : true})
+      .subscribe((data) => {
+        configs.location.latitude = data.coords.latitude;
+        configs.location.longitude = data.coords.longitude;
+
+        if(!this.initiate) {
+          return
+        }
+
+        this.storage.get('settings').then(settings => {
+          if(!settings) {
+            this.storage.set('settings', configs.settings).then(() => {});
+            return;
+          }
+          configs.settings = settings;
+          this.initiate = true;
+        });
+      }, err => {
+      });
   }
 
   navigateToServices(param: boolean): void {

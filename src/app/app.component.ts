@@ -2,7 +2,6 @@ import { Component, ViewChild } from '@angular/core';
 import { Platform, NavController, ModalController, MenuController, AlertController, LoadingController, Loading, Events } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { Geolocation } from '@ionic-native/geolocation';
 import * as moment from 'moment';
 
 import { SigninPage } from '../pages/signin/signin';
@@ -35,8 +34,7 @@ export class MyApp {
     private auth: AuthServiceProvider,
     private loadingCtrl: LoadingController,
     public events: Events,
-    public menuCtrl: MenuController,
-    private geolocation: Geolocation
+    public menuCtrl: MenuController
   ) {
 
     platform.ready().then(() => {
@@ -84,35 +82,15 @@ export class MyApp {
         });
       }
 
-      this.geolocation.watchPosition().subscribe((data) => {
-        configs.location.latitude = data.coords.latitude;
-        configs.location.longitude = data.coords.longitude;
-
-        if(this.initiated) {
+      this.storage.get('settings').then(settings => {
+        if(!settings) {
+          this.storage.set('settings', configs.settings).then(() => perform());
           return;
         }
-
-        this.storage.get('settings').then(settings => {
-          if(!settings) {
-            this.storage.set('settings', configs.settings).then(() => perform());
-            return;
-          }
-          configs.settings = settings;
-          perform();
-        });
-      }, err => {
-        const alert = this.alertCtrl.create({
-          title:  'Falha ao obter sua localização',
-          subTitle: 'Não foi possível obter sua localização. Certifique-se de que seu GPS está ativado',
-          buttons: [
-            {
-              text: 'Ok',
-              handler: () => {}
-            }
-          ]
-        });
-        alert.present();
+        configs.settings = settings;
+        perform();
       });
+
       // const splash = modalCtrl.create(SplashPage);
       // splash.present();
     });

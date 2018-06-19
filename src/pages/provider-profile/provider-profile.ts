@@ -54,17 +54,11 @@ export class ProviderProfilePage {
 
   call(item:any): void {
     if(this.platform.is('ios') || this.platform.is('android')) {
-      this.callNumber.isCallSupported()
-        .then(function (response) {
-            if (response == true) {
-              this.callNumber.callNumber(item.phone, true)
-                .then(res => {
-                  // métricas de click no telefone
-                })
-                .catch(err => {
-
-                });
-            }
+      this.callNumber.callNumber(item.phone, true)
+        .then(res => {
+          // métricas de click no telefone
+        })
+        .catch(err => {
         });
     }
   }

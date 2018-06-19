@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Platform, LoadingController, Loading } from 'ionic-angular';
 
 import { MenuPage } from '../menu/menu';
 import { ProviderProfilePage } from '../provider-profile/provider-profile';
@@ -16,7 +16,7 @@ import config from '../../app/config';
 })
 export class ServiceProviderPage {
   value: any;
-
+  loading: Loading;
   providersModel:any = {
     error: false,
     messages: [],
@@ -41,16 +41,21 @@ export class ServiceProviderPage {
     private userService: UsersServiceProvider,
     private callNumber: CallNumber,
     private platform: Platform,
-    private socialSharing: SocialSharing
+    private socialSharing: SocialSharing,
+    private loadingCtrl: LoadingController
   ) {
     this.value = this.navParams.data;
   }
 
   ionViewDidLoad(): void {
+    this.showLoading();
     this.userService.searchByGeo({geo:`${config.location.latitude},${config.location.longitude}`}).then(result => {
       this.providers = result.body;
+      this.loading.dismiss();
     }).catch(err => {
-      this.providers = JSON.parse(JSON.stringify(this.providersModel));
+      this.loading.dismiss().then(() => {
+        this.providers = JSON.parse(JSON.stringify(this.providersModel));
+      });
     });
   }
 
@@ -81,23 +86,25 @@ export class ServiceProviderPage {
 
   call(item:any): void {
     if(this.platform.is('ios') || this.platform.is('android')) {
-      this.callNumber.isCallSupported()
-        .then(function (response) {
-            if (response == true) {
-              this.callNumber.callNumber(item.phone, true)
-                .then(res => {
-                  // métricas de click no telefone
-                })
-                .catch(err => {
-
-                });
-            }
+      this.callNumber.callNumber(item.phone, true)
+        .then(res => {
+          // métricas de click no telefone
+        })
+        .catch(err => {
         });
     }
   }
 
   navigateToMenu(): void {
     this.navCtrl.push(MenuPage);
+  }
+
+  showLoading(message:string = ''): void {
+    this.loading = this.loadingCtrl.create({
+      content: message || 'Aguarde...',
+      dismissOnPageChange: true
+    });
+    this.loading.present();
   }
 
   back() {

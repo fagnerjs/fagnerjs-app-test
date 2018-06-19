@@ -5,7 +5,7 @@
               <path d="M0 5l6-5v4h14v2H6v4z" fill="#000" fill-rule="evenodd" /> </svg>
       </a>
       <div class="content">
-          <img src="../assets/imgs/logo-us-horizontal.svg" width="136" height="24" class="verticallyCenter" />
+          <img src="assets/imgs/logo-us-horizontal.svg" width="136" height="24" class="verticallyCenter" />
       </div>
       <a (click)="navigateToMenu()" alt="Menu" class="button right">
           <svg width="20" height="14" xmlns="http://www.w3.org/2000/svg">
@@ -14,6 +14,7 @@
   </nav>
   <div class="serviceProvider">
       <p> Veja os prestadores de <br />serviço de limpeza: </p>
+      <p>{{data}}</p>
       <div *ngFor="let item of providers.data.items" class="card">
           <div class="content">
               <div class="avatar">
@@ -27,19 +28,19 @@
               </h3>
               <ul class="rate">
                 <li>
-                    <img [src]="item.rating?.average >= 1 ? '../assets/imgs/star-full.svg' : '../assets/imgs/star-empty.svg'" width="13" height="12" />
+                    <img [src]="item.rating?.average >= 1 ? 'assets/imgs/star-full.svg' : 'assets/imgs/star-empty.svg'" width="13" height="12" />
                 </li>
                 <li>
-                    <img [src]="item.rating?.average >= 2 ? '../assets/imgs/star-full.svg' : '../assets/imgs/star-empty.svg'" width="13" height="12" />
+                    <img [src]="item.rating?.average >= 2 ? 'assets/imgs/star-full.svg' : 'assets/imgs/star-empty.svg'" width="13" height="12" />
                 </li>
                 <li>
-                    <img [src]="item.rating?.average >= 3 ? '../assets/imgs/star-full.svg' : '../assets/imgs/star-empty.svg'" width="13" height="12" />
+                    <img [src]="item.rating?.average >= 3 ? 'assets/imgs/star-full.svg' : 'assets/imgs/star-empty.svg'" width="13" height="12" />
                 </li>
                 <li>
-                    <img [src]="item.rating?.average >= 4 ? '../assets/imgs/star-full.svg' : '../assets/imgs/star-empty.svg'" width="13" height="12" />
+                    <img [src]="item.rating?.average >= 4 ? 'assets/imgs/star-full.svg' : 'assets/imgs/star-empty.svg'" width="13" height="12" />
                 </li>
                 <li>
-                    <img [src]="item.rating?.average >= 5 ? '../assets/imgs/star-full.svg' : '../assets/imgs/star-empty.svg'" width="13" height="12" />
+                    <img [src]="item.rating?.average >= 5 ? 'assets/imgs/star-full.svg' : 'assets/imgs/star-empty.svg'" width="13" height="12" />
                 </li>
                 <li>
                   {{item.rating?.count_rating || 0}} {{item.rating?.count_rating === 1 ? 'avaliação' : 'avaliações'}}
@@ -60,7 +61,7 @@
                     <ion-option (ionSelect)="selectContact($event, item)" value="phone">Ligar para {{item?.phone}}</ion-option>
                   </ion-select>
                   <a (click)="void" class="button">
-                    Entrar em contato
+                    Contato
                   </a>
                 </ion-col>
               </ion-row>
