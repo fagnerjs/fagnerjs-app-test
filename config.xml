@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.ionic.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>uberservice</name>
-    <description>uberservice</description>
-    <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
+    <name>UberService</name>
+    <description>UberService</description>
+    <author email="fagner.janderson@yahoo.com.br" href="https://www.facebook.com/fagnerjanderson/">Fagner Janderson</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -90,19 +90,18 @@
     <allow-navigation href="http://172.18.0.1:8100" />
     <allow-navigation href="http://localhost:8100" />
     <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
+    <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
     <plugin name="cordova-plugin-device" spec="^2.0.1" />
     <plugin name="cordova-plugin-ionic-webview" spec="^1.1.16" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
-    <plugin name="cordova-sqlite-storage" spec="~2.3.0" />
+    <plugin name="cordova-sqlite-storage" spec="^2.3.0" />
     <plugin name="cordova-plugin-advanced-http" spec="~1.11.1" />
+    <plugin name="mx.ferreyra.callnumber" spec="^1.0.1" />
     <plugin name="cordova-plugin-x-socialsharing" spec="~5.4.0" />
-    <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
-    <plugin name="cordova-plugin-geolocation" spec="^4.0.1">
-        <variable name="GEOLOCATION_USAGE_DESCRIPTION" value="To locate you" />
-    </plugin>
-    <plugin name="mx.ferreyra.callnumber" spec="~0.0.2" />
-    <plugin name="cordova.plugins.diagnostic" spec="^4.0.8" />
-    <plugin name="cordova-open-native-settings" spec="^1.5.1" />
+    <plugin name="cordova-plugin-geolocation" spec="^4.0.1" />
+    <plugin name="cordova.plugins.diagnostic" spec="~4.0.8" />
+    <plugin name="cordova-open-native-settings" spec="~1.5.1" />
+    <plugin name="cordova-plugin-nativestorage" spec="~2.3.1" />
     <engine name="browser" spec="5.0.3" />
     <engine name="android" spec="^6.1.2" />
     <engine name="ios" spec="^4.5.4" />

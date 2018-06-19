@@ -82,9 +82,9 @@ export class MyApp {
         });
       }
 
-      this.storage.get('settings').then(settings => {
+      this.storage.get('_app-settings').then(settings => {
         if(!settings) {
-          this.storage.set('settings', configs.settings).then(() => perform());
+          this.storage.set('_app-settings', configs.settings).then(() => perform());
           return;
         }
         configs.settings = settings;

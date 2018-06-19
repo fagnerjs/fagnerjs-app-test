@@ -35,7 +35,7 @@ export class AuthServiceProvider {
           return reject();
         }
 
-        this.storage.get('settings').then(settings => {
+        this.storage.get('_app-settings').then(settings => {
           if(!settings) {
             return reject();
           }
@@ -43,7 +43,7 @@ export class AuthServiceProvider {
           settings.auth.session = session;
           settings.auth.user = r.body.data.user;
 
-          this.storage.set('settings', settings).then(() => {
+          this.storage.set('_app-settings', settings).then(() => {
             configs.settings = settings;
             resolve(r.body);
           }).catch(reject);
@@ -62,7 +62,7 @@ export class AuthServiceProvider {
       this.http.get(`${this.apiHost}/authorization/local/me`, null, {
         parse: false
       }).then(r => {
-        this.storage.get('settings').then(settings => {
+        this.storage.get('_app-settings').then(settings => {
           if(!settings) {
             return reject();
           }
@@ -70,7 +70,7 @@ export class AuthServiceProvider {
           settings.auth.session = session;
           settings.auth.user = r.body.data;
 
-          this.storage.set('settings', settings).then(() => {
+          this.storage.set('_app-settings', settings).then(() => {
             configs.settings = settings;
             resolve(r.body);
           }).catch(reject);

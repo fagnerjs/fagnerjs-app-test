@@ -34,6 +34,9 @@
     <feature name="NativeSettings">
         <param name="android-package" value="com.phonegap.plugins.nativesettings.NativeSettings" />
     </feature>
+    <feature name="NativeStorage">
+        <param name="android-package" value="NativeStorage" />
+    </feature>
     <feature name="Keyboard">
         <param name="android-package" onload="true" value="io.ionic.keyboard.IonicKeyboard" />
     </feature>
@@ -69,9 +72,9 @@
         <param name="android-package" value="cordova.plugins.Diagnostic_External_Storage" />
         <param name="onload" value="true" />
     </feature>
-    <name>uberservice</name>
-    <description>uberservice</description>
-    <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
+    <name>UberService</name>
+    <description>UberService</description>
+    <author email="fagner.janderson@yahoo.com.br" href="https://www.facebook.com/fagnerjanderson/">Fagner Janderson</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />

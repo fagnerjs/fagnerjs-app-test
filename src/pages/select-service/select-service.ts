@@ -20,7 +20,6 @@ import { ServiceProviderPage } from '../service-provider/service-provider';
   templateUrl: 'select-service.html',
 })
 export class SelectServicePage {
-  initiate: boolean = false;
   subscription: any;
   constructor(
     public navCtrl: NavController,
@@ -53,7 +52,7 @@ export class SelectServicePage {
               handler: () => {
                 this.diagnostic.registerLocationStateChangeHandler(() => {
                   this.getPosition();
-                })
+                });
                 this.openSettings.open('location');
               }
             }
@@ -62,8 +61,9 @@ export class SelectServicePage {
         alert.present();
         return;
       }
+
       this.getPosition();
-    }).catch(err => {});
+    });
   }
 
   getPosition() {
@@ -72,27 +72,22 @@ export class SelectServicePage {
     }
     this.subscription = this.geolocation
       .watchPosition({enableHighAccuracy : true})
-      .subscribe((data) => {
+      .subscribe(data => {
 
         configs.location.latitude = data.coords.latitude;
         configs.location.longitude = data.coords.longitude;
 
-        if(!this.initiate) {
-          return
-        }
-
-        this.storage.get('settings').then(settings => {
+        this.storage.get('_app-settings').then(settings => {
           if(!settings) {
-            this.storage.set('settings', configs.settings).then(() => {});
+            this.storage.set('_app-settings', configs.settings).then(() => {});
             return;
           }
           configs.settings = settings;
-          this.initiate = true;
         });
       }, err => {
         const alert = this.alertCtrl.create({
           title:  'Erro',
-          subTitle: 'Erro ao obter a localização',
+          subTitle: 'Ocorreu um erro ao obter sua localização',
           buttons: [
             {
               text: 'Ok',

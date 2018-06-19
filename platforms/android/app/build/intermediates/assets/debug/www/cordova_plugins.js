@@ -379,6 +379,24 @@ module.exports = [
     "clobbers": [
       "cordova.plugins.settings"
     ]
+  },
+  {
+    "id": "cordova-plugin-nativestorage.mainHandle",
+    "file": "plugins/cordova-plugin-nativestorage/www/mainHandle.js",
+    "pluginId": "cordova-plugin-nativestorage",
+    "clobbers": [
+      "NativeStorage"
+    ]
+  },
+  {
+    "id": "cordova-plugin-nativestorage.LocalStorageHandle",
+    "file": "plugins/cordova-plugin-nativestorage/www/LocalStorageHandle.js",
+    "pluginId": "cordova-plugin-nativestorage"
+  },
+  {
+    "id": "cordova-plugin-nativestorage.NativeStorageError",
+    "file": "plugins/cordova-plugin-nativestorage/www/NativeStorageError.js",
+    "pluginId": "cordova-plugin-nativestorage"
   }
 ];
 module.exports.metadata = 
@@ -397,7 +415,8 @@ module.exports.metadata =
   "cordova-plugin-x-socialsharing": "5.4.0",
   "cordova-plugin-geolocation": "4.0.1",
   "cordova.plugins.diagnostic": "4.0.8",
-  "cordova-open-native-settings": "1.5.1"
+  "cordova-open-native-settings": "1.5.1",
+  "cordova-plugin-nativestorage": "2.3.1"
 };
 // BOTTOM OF METADATA
 });
