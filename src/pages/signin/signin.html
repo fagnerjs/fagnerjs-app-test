@@ -9,7 +9,7 @@
             </p>
         </div>
     </div>
-    <form [formGroup]="form">
+    <form name="signin" [formGroup]="form" (ngSubmit)="submit()">
       <label>
         <div class="verticallyCenter">
           <span>Informe o seu telefone</span>
@@ -22,6 +22,7 @@
         <a (click)="submit()" class="button">
           Avançar →
         </a>
+        <button type="submit" style="position:fixed;left:-5000px">.</button>
     </form>
 </div>
 </ion-content>

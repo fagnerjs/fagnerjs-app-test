@@ -16,7 +16,7 @@
           </p>
         </div>
       </div>
-      <form [formGroup]="form">
+      <form [formGroup]="form" (ngSubmit)="submit()">
         <label>
           <div class="verticallyCenter">
             <span>Senha</span>
@@ -26,6 +26,7 @@
         <a href="#" class="button secondary sticky">
           Esqueci minha senha
         </a>
+        <button type="submit" style="position:fixed;left:-5000px">.</button>
       </form>
       <a (click)="submit()" class="button sticky">
         Entrar →

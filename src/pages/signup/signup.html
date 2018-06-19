@@ -15,7 +15,7 @@
         Você não tem cadastro, <br />
         crie grátis sua conta!
     </p>
-    <form [formGroup]="form">
+    <form name="signup" [formGroup]="form" (ngSubmit)="submit()">
       <label>
         <div class="verticallyCenter">
           <span>Nome</span>
@@ -28,9 +28,10 @@
           <input type="email" formControlName="email" placeholder="maria.silva@email.com" />
         </div>
       </label>
-    </form>
-    <a (click)="submit()" class="button sticky">
+      <a (click)="submit()" class="button sticky">
         Avançar →
-    </a>
+      </a>
+      <button type="submit" style="position:fixed;left:-5000px">.</button>
+    </form>
   </div>
 </ion-content>
