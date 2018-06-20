@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController, LoadingController, Loading } from 'ionic-angular';
+import { NavController, NavParams, AlertController, LoadingController, Loading } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
@@ -7,7 +7,6 @@ import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { SignupPage } from '../signup/signup';
 import { LoginPage } from '../login/login';
 
-@IonicPage()
 @Component({
   selector: 'page-signin',
   templateUrl: 'signin.html',

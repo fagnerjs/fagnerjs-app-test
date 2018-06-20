@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, AlertController, Loading } from 'ionic-angular';
+import { NavController, NavParams, LoadingController, AlertController, Loading } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { SelectServicePage } from '../select-service/select-service';
 
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 
-@IonicPage()
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html',

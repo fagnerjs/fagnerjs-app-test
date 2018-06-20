@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Platform, LoadingController, Loading } from 'ionic-angular';
+import { NavController, NavParams, Platform, LoadingController, Loading } from 'ionic-angular';
 
 import { MenuPage } from '../menu/menu';
 import { ProviderProfilePage } from '../provider-profile/provider-profile';
@@ -9,7 +9,6 @@ import { CallNumber } from '@ionic-native/call-number';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import config from '../../app/config';
 
-@IonicPage()
 @Component({
   selector: 'page-service-provider',
   templateUrl: 'service-provider.html',

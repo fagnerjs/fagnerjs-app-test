@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, Loading, AlertController } from 'ionic-angular';
+import { NavController, NavParams, LoadingController, Loading, AlertController } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 
 import { SelectServicePage } from '../select-service/select-service';
@@ -16,7 +16,6 @@ function passwordConfirming(c: AbstractControl): any {
   }
 }
 
-@IonicPage()
 @Component({
   selector: 'page-password',
   templateUrl: 'password.html',

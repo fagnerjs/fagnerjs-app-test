@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
+import { NavController, NavParams, Platform } from 'ionic-angular';
 
 import { CallNumber } from '@ionic-native/call-number';
 import { SocialSharing } from '@ionic-native/social-sharing';
 
 import { ProviderSchedulePage } from '../provider-schedule/provider-schedule';
 
-@IonicPage()
 @Component({
   selector: 'page-provider-profile',
   templateUrl: 'provider-profile.html',

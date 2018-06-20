@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { NavController, NavParams, ViewController } from 'ionic-angular';
 
 import { ServiceCancelPage } from '../service-cancel/service-cancel';
 
-@IonicPage()
 @Component({
   selector: 'page-service-hired-profile',
   templateUrl: 'service-hired-profile.html',

@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { NavController, NavParams, AlertController } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { ServiceSummaryPage } from '../service-summary/service-summary';
 
 import Util from '../../shared/util/util';
 
-@IonicPage()
 @Component({
   selector: 'page-provider-place',
   templateUrl: 'provider-place.html',

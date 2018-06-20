@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController, AlertController } from 'ionic-angular';
+import { NavController, NavParams, ModalController, AlertController } from 'ionic-angular';
 import { Diagnostic } from '@ionic-native/diagnostic';
 import { OpenNativeSettings } from '@ionic-native/open-native-settings';
 import { MenuPage } from '../menu/menu';
@@ -14,7 +14,6 @@ import configs from '../../app/config';
 
 import { ServiceProviderPage } from '../service-provider/service-provider';
 
-@IonicPage()
 @Component({
   selector: 'page-select-service',
   templateUrl: 'select-service.html',
