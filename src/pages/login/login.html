@@ -7,29 +7,31 @@
         <img src="assets/imgs/logo-us-horizontal.svg" width="136" height="24" class="verticallyCenter" />
     </div>
   </nav>
-  <div class="signUp">
-      <div class="header">
-        <div>
-          <p>
-            Conecte-se para poder encontrar<br />
-            prestadores de serviços próximos a você!
-          </p>
-        </div>
-      </div>
-      <form [formGroup]="form" (ngSubmit)="submit()">
-        <label>
-          <div class="verticallyCenter">
-            <span>Senha</span>
-            <input formControlName="password" type="password" placeholder="Escreva sua senha" />
-          </div>
-        </label>
-        <a href="#" class="button secondary sticky">
-          Esqueci minha senha
-        </a>
-        <button type="submit" style="position:fixed;left:-5000px">.</button>
-      </form>
-      <a (click)="submit()" class="button sticky">
-        Entrar →
-      </a>
+  <div class="signUp password">
+      <ion-row>
+        <p>
+          Conecte-se para poder encontrar<br />
+          prestadores de serviços próximos a você!
+        </p>
+      </ion-row>
+      <ion-row>
+        <form [formGroup]="form" (ngSubmit)="submit()">
+          <ion-row>
+            <label>
+              <div class="verticallyCenter">
+                <span>Senha</span>
+                <input formControlName="password" type="password" placeholder="Escreva sua senha" />
+              </div>
+            </label>
+          </ion-row>
+          <a href="#" class="button secondary">
+            Esqueci minha senha
+          </a>
+          <a (click)="submit()" class="button">
+            Entrar →
+          </a>
+          <button type="submit" style="position:fixed;left:-5000px">.</button>
+        </form>
+      </ion-row>
   </div>
 </ion-content>

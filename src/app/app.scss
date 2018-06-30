@@ -288,7 +288,7 @@ nav .right {
   width: 100%;
   height: 50vh;
   margin: 0;
-  padding-top: 0;
+  padding: 15px 0;
   text-align: center;
   background: #fcfcfc;
 }
@@ -296,9 +296,10 @@ nav .right {
   margin-bottom: 32px;
 }
 .signIn label {
+  padding: 15px 0;
   display: table;
   width: 100%;
-  height: calc(50vh - 59px);
+  height: calc(50vh - 118px);
   background: #fff;
   box-shadow: 0 1px 0 0 #f2f2f2, 0 -1px 0 0 #f2f2f2;
 }
@@ -361,13 +362,31 @@ nav .right {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .signUp {
-  margin-top: 88px;
+  margin-top: 60px;
+  display: table;
+  width: 100%;
+}
+.signUp ion-row {
+  display: table-row;
 }
 .signUp p {
-  margin-bottom: 28px;
+  display: table-cell;
+  padding: 15px 0;
+  height: 17.1vh;
+  vertical-align: middle;
+}
+.signUp form {
+  display: table;
+  width: 100%;
+}
+.signUp form ion-row {
+  height: calc(82.9vh - 120px);
+}
+.signUp.password form ion-row {
+  height: calc(82.9vh - 180px);
 }
 .signUp label {
-  display: block;
+  display: table;
   width: 100%;
   background: #fff;
   box-shadow: 0 1px 0 0 #f2f2f2, 0 -1px 0 0 #f2f2f2;
