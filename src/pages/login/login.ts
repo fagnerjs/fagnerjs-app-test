@@ -64,7 +64,7 @@ export class LoginPage {
 
     this.auth.authenticate(this.form.get('phone').value, this.form.get('password').value)
       .then((result:any) => {
-        this.loading.dismiss().then(() => this.navCtrl.setRoot(
+        this.loading.dismiss().then(() => this.navCtrl.push(
           result.data.user.isPasswordGenerated ? ForgotPasswordPage : SelectServicePage, Object.assign(result.data.user, {scope: 'change'})
         ));
       }).catch(err => {

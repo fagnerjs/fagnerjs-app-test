@@ -139,7 +139,7 @@ export class ForgotPasswordPage {
         .catch(e => {
           const alert = this.alertCtrl.create({
             title: 'Falha',
-            subTitle: 'Ocorreu um erro efetuar o cadastro',
+            subTitle: 'Ocorreu um erro. Tente novamente',
             buttons: [
               {
                 text: 'Ok',
