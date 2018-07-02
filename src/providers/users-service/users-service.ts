@@ -17,4 +17,11 @@ export class UsersServiceProvider {
   searchByGeo(params:any) {
     return this.http.get(`${this.apiHost}/users/geosearch`, params, {headers: JSON.parse(JSON.stringify(this.headers))})
   }
+
+  update(id, params) {
+    return new Promise((resolve, reject) => {
+      this.http.put(`${this.apiHost}/users/update/${id}`, params, {headers: JSON.parse(JSON.stringify(this.headers))})
+        .then(resolve).catch(reject)
+    });
+  }
 }

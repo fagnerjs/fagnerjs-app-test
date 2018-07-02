@@ -18,6 +18,7 @@ import { MenuPage } from '../pages/menu/menu';
 import { SigninPage } from '../pages/signin/signin';
 import { SignupPage } from '../pages/signup/signup';
 import { PasswordPage } from '../pages/password/password';
+import { ForgotPasswordPage } from '../pages/forgot-password/forgot-password';
 import { LoginPage } from '../pages/login/login';
 import { SelectServicePage } from '../pages/select-service/select-service';
 import { ServiceSettingsPage } from '../pages/service-settings/service-settings';
@@ -54,6 +55,7 @@ import { CustomHttp } from '../providers/customHttp';
     SigninPage,
     SignupPage,
     PasswordPage,
+    ForgotPasswordPage,
     LoginPage,
     SelectServicePage,
     ServiceSettingsPage,
@@ -84,6 +86,7 @@ import { CustomHttp } from '../providers/customHttp';
     SigninPage,
     SignupPage,
     PasswordPage,
+    ForgotPasswordPage,
     LoginPage,
     SelectServicePage,
     ServiceSettingsPage,

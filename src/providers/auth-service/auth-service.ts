@@ -57,6 +57,10 @@ export class AuthServiceProvider {
     return this.http.get(`${this.apiHost}/users/check`, params);
   }
 
+  forgotPassword(params:any) {
+    return this.http.get(`${this.apiHost}/users/forgot-password`, params);
+  }
+
   me(session:string) {
     return new Promise((resolve, reject) => {
       this.http.get(`${this.apiHost}/authorization/local/me`, null, {

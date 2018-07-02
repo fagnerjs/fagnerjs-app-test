@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, LoadingController, AlertController, Loading } from 'ionic-angular';
+import { NavController, NavParams, LoadingController, AlertController, Loading, ModalController } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { SelectServicePage } from '../select-service/select-service';
+import { ForgotPasswordPage } from '../forgot-password/forgot-password';
 
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 
@@ -20,6 +21,7 @@ export class LoginPage {
     private formBuilder: FormBuilder,
     private alertCtrl: AlertController,
     private loadingCtrl: LoadingController,
+    private modalCtrl: ModalController,
     private auth: AuthServiceProvider
   ) {
     this.form = this.formBuilder.group({
@@ -61,8 +63,10 @@ export class LoginPage {
     this.showLoading();
 
     this.auth.authenticate(this.form.get('phone').value, this.form.get('password').value)
-      .then(result => {
-        this.loading.dismiss().then(() => this.navCtrl.setRoot(SelectServicePage));
+      .then((result:any) => {
+        this.loading.dismiss().then(() => this.navCtrl.setRoot(
+          result.data.user.isPasswordGenerated ? ForgotPasswordPage : SelectServicePage, Object.assign(result.data.user, {scope: 'change'})
+        ));
       }).catch(err => {
         this.loading.dismiss().then(() => {
           const alert = this.alertCtrl.create({
@@ -73,6 +77,13 @@ export class LoginPage {
           alert.present();
         });
       });
+  }
+
+  forgotPassword() {
+    const modal = this.modalCtrl.create(ForgotPasswordPage, Object.assign(this.form.value, {
+      scope: 'email'
+    }));
+    modal.present();
   }
 
   back() {
