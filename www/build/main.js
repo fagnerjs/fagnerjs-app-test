@@ -1674,7 +1674,7 @@ var LoginPage = /** @class */ (function () {
     LoginPage.prototype.submit = function () {
         var _this = this;
         if (!this.form.valid) {
-            var alert = this.alertCtrl.create({
+            var alert_1 = this.alertCtrl.create({
                 title: !this.form.get('password').valid ? 'Por favor, insira seu e-mail e sua senha' : 'Por favor, insira um e-mail válido',
                 subTitle: '',
                 buttons: [
@@ -1684,7 +1684,7 @@ var LoginPage = /** @class */ (function () {
                     }
                 ]
             });
-            alert.present();
+            alert_1.present();
             return;
         }
         this.showLoading();
@@ -1723,10 +1723,15 @@ var LoginPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-login',template:/*ion-inline-start:"/export/uberservice/app/src/pages/login/login.html"*/'<ion-content>\n  <nav>\n    <a (click)="back()" alt="Return" class="button left">\n        <svg width="20" height="10" xmlns="http://www.w3.org/2000/svg"><path d="M0 5l6-5v4h14v2H6v4z" fill="#000" fill-rule="evenodd"/></svg>\n    </a>\n    <div class="content">\n        <img src="assets/imgs/logo-us-horizontal.svg" width="136" height="24" class="verticallyCenter" />\n    </div>\n  </nav>\n  <div class="signUp password">\n      <ion-row>\n        <p>\n          Conecte-se para poder encontrar<br />\n          prestadores de serviços próximos a você!\n        </p>\n      </ion-row>\n      <ion-row>\n        <form [formGroup]="form" (ngSubmit)="submit()">\n          <ion-row>\n            <label>\n              <div class="verticallyCenter">\n                <span>Senha</span>\n                <input formControlName="password" type="password" placeholder="Escreva sua senha" />\n              </div>\n            </label>\n          </ion-row>\n          <a (click)="forgotPassword()" class="button secondary">\n            Esqueci minha senha\n          </a>\n          <a (click)="submit()" class="button">\n            Entrar →\n          </a>\n          <button type="submit" style="position:fixed;left:-5000px">.</button>\n        </form>\n      </ion-row>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/export/uberservice/app/src/pages/login/login.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ModalController */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_5__providers_auth_service_auth_service__["a" /* AuthServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__providers_auth_service_auth_service__["a" /* AuthServiceProvider */]) === "function" && _g || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ModalController */],
+            __WEBPACK_IMPORTED_MODULE_5__providers_auth_service_auth_service__["a" /* AuthServiceProvider */]])
     ], LoginPage);
     return LoginPage;
-    var _a, _b, _c, _d, _e, _f, _g;
 }());
 
 //# sourceMappingURL=login.js.map
@@ -1825,7 +1830,7 @@ var ForgotPasswordPage = /** @class */ (function () {
                     message.subtitle = '';
                 }
             }
-            var alert = this.alertCtrl.create({
+            var alert_1 = this.alertCtrl.create({
                 title: message.title,
                 subTitle: message.subtitle,
                 buttons: [
@@ -1835,7 +1840,7 @@ var ForgotPasswordPage = /** @class */ (function () {
                     }
                 ]
             });
-            alert.present();
+            alert_1.present();
             return;
         }
         this.showLoading();
@@ -1906,10 +1911,15 @@ var ForgotPasswordPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-forgot-password',template:/*ion-inline-start:"/export/uberservice/app/src/pages/forgot-password/forgot-password.html"*/'<ion-content class="bgGray">\n  <nav>\n    <a (click)="back()" alt="Return" class="button left">\n      <svg width="20" height="10" xmlns="http://www.w3.org/2000/svg"><path d="M0 5l6-5v4h14v2H6v4z" fill="#000" fill-rule="evenodd"/></svg>\n    </a>\n    <div class="content">\n      <img src="assets/imgs/logo-us-horizontal.svg" width="136" height="24" class="verticallyCenter" />\n    </div>\n    <!-- <a href="00-menu.html" alt="Menu" class="button right">\n        <svg width="20" height="14" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h12v2H4V6zm-4 6h20v2H0v-2zM0 0h20v2H0V0z" fill="#000" fill-rule="evenodd"/></svg>\n    </a> -->\n  </nav>\n  <div class="signUp">\n    <ion-row>\n      <p *ngIf="scope == \'email\'">\n        Esqueceu sua senha?<br/>Informe seu e-mail de cadastro\n      </p>\n      <p *ngIf="scope != \'email\'">\n        Você acessou com sua senha temporária.<br>Crie uma nova senha\n      </p>\n    </ion-row>\n    <ion-row>\n      <form [formGroup]="form" (ngSubmit)="submit()">\n        <ion-row *ngIf="scope != \'email\'">\n          <label>\n            <div class="verticallyCenter">\n              <span>Defina uma senha</span>\n              <input formControlName="password" type="password" placeholder="Pelo menos 6 caracteres" />\n            </div>\n          </label>\n          <label>\n            <div class="verticallyCenter">\n              <span>Repita a senha</span>\n              <input formControlName="repassword" type="password" placeholder="Confirme a senha" />\n            </div>\n          </label>\n        </ion-row>\n        <ion-row *ngIf="scope == \'email\'">\n          <label>\n            <div class="verticallyCenter">\n              <span>E-mail de cadastro</span>\n              <input formControlName="email" type="email" placeholder="Confirme seu e-mail" />\n            </div>\n          </label>\n        </ion-row>\n        <a (click)="submit()" class="button">{{scope == \'email\' ? \'Enviar\' : \'Alterar senha\'}}</a>\n        <button type="submit" style="position:fixed;left:-5000px">.</button>\n      </form>\n    </ion-row>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/export/uberservice/app/src/pages/forgot-password/forgot-password.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_4__providers_auth_service_auth_service__["a" /* AuthServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers_auth_service_auth_service__["a" /* AuthServiceProvider */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_5__providers_users_service_users_service__["a" /* UsersServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__providers_users_service_users_service__["a" /* UsersServiceProvider */]) === "function" && _g || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_4__providers_auth_service_auth_service__["a" /* AuthServiceProvider */],
+            __WEBPACK_IMPORTED_MODULE_5__providers_users_service_users_service__["a" /* UsersServiceProvider */]])
     ], ForgotPasswordPage);
     return ForgotPasswordPage;
-    var _a, _b, _c, _d, _e, _f, _g;
 }());
 
 //# sourceMappingURL=forgot-password.js.map
