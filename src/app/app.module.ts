@@ -4,6 +4,7 @@ import { HttpModule } from '@angular/http';
 import { IonicStorageModule } from '@ionic/storage';
 import { CallNumber } from '@ionic-native/call-number';
 import { Crop } from '@ionic-native/crop';
+import { Camera } from '@ionic-native/camera';
 import { Geolocation } from '@ionic-native/geolocation';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -43,6 +44,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { UsersServiceProvider } from '../providers/users-service/users-service';
+import { CameraService } from '../providers/camera-service/camera-service';
 
 import { HttpProvider } from '../providers/httpProvider';
 import { HttpAngularProvider } from '../providers/http-angular';
@@ -109,6 +111,7 @@ import { CustomHttp } from '../providers/customHttp';
     SplashScreen,
     AuthServiceProvider,
     UsersServiceProvider,
+    CameraService,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     UtilsProvider,
     PhoneMask,
@@ -119,6 +122,7 @@ import { CustomHttp } from '../providers/customHttp';
     CustomHttp,
     CallNumber,
     Crop,
+    Camera,
     SocialSharing,
     Geolocation,
     Diagnostic,

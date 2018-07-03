@@ -10,11 +10,22 @@ INJECTED from /export/uberservice/app/platforms/android/app/src/main/AndroidMani
 		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:17:75-99
 	android:name
 		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:17:135-183
+provider#org.apache.cordova.camera.FileProvider
+INJECTED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:21:9-23:20
+	android:grantUriPermissions
+		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:21:92-126
+	android:authorities
+		INJECTED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml
+		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:21:19-66
+	android:exported
+		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:21:67-91
+	android:name
+		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:21:127-180
 manifest
-ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:2:1-31:12
+ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:2:1-34:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f222a5cc2ab8afaa30fbf03a9b7d8b5c/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-v4:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/8936d9865c119cae3cd788ab7e78e224/AndroidManifest.xml:17:1-31:12
 MERGED from [com.soundcloud.android:android-crop:1.0.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/android-crop-1.0.0.aar/a75a7103b7e33da82eafee9688083572/AndroidManifest.xml:2:1-10:12
@@ -27,9 +38,9 @@ MERGED from [com.android.support:support-media-compat:26.1.0] /home/fjsilva/.gra
 MERGED from [com.android.support:support-core-utils:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/a63d8a1a592cf0cc1608ed9fe6bc2c2b/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-compat:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/346f412ae5ff4a87ffa980e7ace6fcc4/AndroidManifest.xml:17:1-31:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/288b07acfb592d31534009ef7e040646/AndroidManifest.xml:17:1-30:12
-INJECTED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:2:1-34:12
 	package
 		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:2:98-124
 		INJECTED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml
@@ -65,7 +76,7 @@ ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifes
 	android:name
 		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:4:22-64
 application
-ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:5:5-21:19
+ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:5:5-24:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f222a5cc2ab8afaa30fbf03a9b7d8b5c/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f222a5cc2ab8afaa30fbf03a9b7d8b5c/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:support-v4:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/8936d9865c119cae3cd788ab7e78e224/AndroidManifest.xml:25:5-29:19
@@ -137,7 +148,7 @@ ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifes
 	android:name
 		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:20:19-79
 uses-sdk
-ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:22:5-74
+ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:25:5-74
 MERGED from [com.android.support:appcompat-v7:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f222a5cc2ab8afaa30fbf03a9b7d8b5c/AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:appcompat-v7:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f222a5cc2ab8afaa30fbf03a9b7d8b5c/AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:support-v4:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/8936d9865c119cae3cd788ab7e78e224/AndroidManifest.xml:21:5-23:54
@@ -165,43 +176,43 @@ MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/fjsilva/.gradle/caches/
 	tools:overrideLibrary
 		ADDED from [com.android.support:appcompat-v7:26.1.0] /home/fjsilva/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f222a5cc2ab8afaa30fbf03a9b7d8b5c/AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
-		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:22:42-71
+		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:25:42-71
 	android:minSdkVersion
-		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:22:15-41
+		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:25:15-41
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:23:5-81
+ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:26:5-81
 	android:name
-		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:23:22-78
+		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:26:22-78
 uses-permission#android.permission.CALL_PHONE
-ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:24:5-69
+ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:27:5-69
 	android:name
-		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:24:22-66
+		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:27:22-66
 uses-feature#android.hardware.telephony
-ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:25:5-88
+ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:28:5-88
 	android:required
-		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:25:61-85
+		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:28:61-85
 	android:name
-		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:25:19-60
+		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:28:19-60
 uses-feature#android.hardware.location.gps
-ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:26:5-66
+ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:29:5-66
 	android:name
-		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:26:19-63
+		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:29:19-63
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:27:5-81
+ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:30:5-81
 	android:name
-		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:27:22-78
+		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:30:22-78
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:28:5-79
+ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:31:5-79
 	android:name
-		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:28:22-76
+		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:31:22-76
 uses-permission#android.permission.ACCESS_LOCATION_EXTRA_COMMANDS
-ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:29:5-89
+ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:32:5-89
 	android:name
-		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:29:22-86
+		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:32:22-86
 uses-permission#android.permission.BLUETOOTH
-ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:30:5-68
+ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:33:5-68
 	android:name
-		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:30:22-65
+		ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:33:22-65
 meta-data#android.support.FILE_PROVIDER_PATHS
 ADDED from /export/uberservice/app/platforms/android/app/src/main/AndroidManifest.xml:18:13-115
 	android:resource

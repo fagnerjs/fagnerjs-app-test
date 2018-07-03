@@ -106,6 +106,9 @@
     <feature name="CropPlugin">
         <param name="ios-package" value="CTCrop" />
     </feature>
+    <feature name="Camera">
+        <param name="ios-package" value="CDVCamera" />
+    </feature>
     <name>UberService</name>
     <description>UberService</description>
     <author email="fagner.janderson@yahoo.com.br" href="https://www.facebook.com/fagnerjanderson/">Fagner Janderson</author>
@@ -171,6 +174,7 @@
     <preference name="PageLength" value="0" />
     <preference name="PaginationBreakingMode" value="page" />
     <preference name="PaginationMode" value="unpaginated" />
+    <preference name="CameraUsesGeolocation" value="false" />
     <preference name="ScrollEnabled" value="false" />
     <preference name="android-minSdkVersion" value="16" />
     <preference name="SplashMaintainAspectRatio" value="true" />
