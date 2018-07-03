@@ -423,6 +423,14 @@ module.exports = [
     "clobbers": [
       "call"
     ]
+  },
+  {
+    "id": "cordova-plugin-crop.CropPlugin",
+    "file": "plugins/cordova-plugin-crop/www/crop.js",
+    "pluginId": "cordova-plugin-crop",
+    "clobbers": [
+      "plugins.crop"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -443,7 +451,8 @@ module.exports.metadata =
   "cordova-sqlite-storage": "2.3.0",
   "cordova-support-android-plugin": "1.0.1",
   "cordova.plugins.diagnostic": "4.0.8",
-  "mx.ferreyra.callnumber": "0.0.2"
+  "mx.ferreyra.callnumber": "0.0.2",
+  "cordova-plugin-crop": "0.3.1"
 };
 // BOTTOM OF METADATA
 });

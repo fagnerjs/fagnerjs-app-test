@@ -102,6 +102,7 @@
     <plugin name="cordova.plugins.diagnostic" spec="~4.0.8" />
     <plugin name="cordova-open-native-settings" spec="~1.5.1" />
     <plugin name="cordova-plugin-nativestorage" spec="~2.3.1" />
+    <plugin name="cordova-plugin-crop" spec="^0.4.0" />
     <engine name="browser" spec="5.0.3" />
     <engine name="android" spec="^6.1.2" />
     <engine name="ios" spec="^4.5.4" />

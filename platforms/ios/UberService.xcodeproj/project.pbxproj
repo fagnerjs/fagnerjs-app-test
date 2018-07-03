@@ -83,6 +83,14 @@
 		E52448533AD9457B80076B0D /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0598E7E8C62C40C492BFD286 /* EventKit.framework */; };
 		F985F7997EB34C7D889AB338 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F914E375910465DA86B1B4B /* CoreMotion.framework */; };
 		1386B072D209455A98267908 /* CFCallNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = CF92AAB376624D71B61886BE /* CFCallNumber.m */; };
+		B01560D203924B508AC185F7 /* CTCrop.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F3D34EDF7EA4F439C0FA2D3 /* CTCrop.m */; };
+		2815F39F5FF84C09B2C9EF30 /* PECropRectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EB074B552F49E79F513E83 /* PECropRectView.m */; };
+		54AF07FB9AD543E38A076B4B /* PECropView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C35D3EC87F47EFB0676F03 /* PECropView.m */; };
+		4CA71FEB8BCB4F59AB5132B6 /* PECropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 115670C7E46F4DF3990DEED2 /* PECropViewController.m */; };
+		509212DC2B8F41E6AEB2F881 /* PEResizeControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C4C025B63EE5473AB3009340 /* PEResizeControl.m */; };
+		D7F6898EC8FD4174872885F7 /* UIImage+PECrop.m in Sources */ = {isa = PBXBuildFile; fileRef = FF65F87DE44B47DCB068CFF4 /* UIImage+PECrop.m */; };
+		E315038771D340489976B66F /* PEPhotoCropEditor.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 74D357CA1B68432D81344B8F /* PEPhotoCropEditor.bundle */; };
+		8C253B7BF53B49C6A588E53C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAAD5D3F50EC4E4F8BFD03ED /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -245,6 +253,20 @@
 		6F914E375910465DA86B1B4B /* CoreMotion.framework */ = {isa = PBXFileReference; name = "CoreMotion.framework"; path = "System/Library/Frameworks/CoreMotion.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		CF92AAB376624D71B61886BE /* CFCallNumber.m */ = {isa = PBXFileReference; name = "CFCallNumber.m"; path = "mx.ferreyra.callnumber/CFCallNumber.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		FE7BD9E24AFC4F4783C0931C /* CFCallNumber.h */ = {isa = PBXFileReference; name = "CFCallNumber.h"; path = "mx.ferreyra.callnumber/CFCallNumber.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		2F3D34EDF7EA4F439C0FA2D3 /* CTCrop.m */ = {isa = PBXFileReference; name = "CTCrop.m"; path = "cordova-plugin-crop/CTCrop.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		68EB074B552F49E79F513E83 /* PECropRectView.m */ = {isa = PBXFileReference; name = "PECropRectView.m"; path = "cordova-plugin-crop/PECropRectView.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		E4C35D3EC87F47EFB0676F03 /* PECropView.m */ = {isa = PBXFileReference; name = "PECropView.m"; path = "cordova-plugin-crop/PECropView.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		115670C7E46F4DF3990DEED2 /* PECropViewController.m */ = {isa = PBXFileReference; name = "PECropViewController.m"; path = "cordova-plugin-crop/PECropViewController.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		C4C025B63EE5473AB3009340 /* PEResizeControl.m */ = {isa = PBXFileReference; name = "PEResizeControl.m"; path = "cordova-plugin-crop/PEResizeControl.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		FF65F87DE44B47DCB068CFF4 /* UIImage+PECrop.m */ = {isa = PBXFileReference; name = "UIImage+PECrop.m"; path = "cordova-plugin-crop/UIImage+PECrop.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		15C01D96E7654CFAB4E207F8 /* CTCrop.h */ = {isa = PBXFileReference; name = "CTCrop.h"; path = "cordova-plugin-crop/CTCrop.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		57F2CFFA0F904B1F89F48B59 /* PECropRectView.h */ = {isa = PBXFileReference; name = "PECropRectView.h"; path = "cordova-plugin-crop/PECropRectView.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		7BD92EC064E246BDAAF8CC51 /* PECropView.h */ = {isa = PBXFileReference; name = "PECropView.h"; path = "cordova-plugin-crop/PECropView.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		0AB8A096C99249A2BB8DEDB2 /* PECropViewController.h */ = {isa = PBXFileReference; name = "PECropViewController.h"; path = "cordova-plugin-crop/PECropViewController.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		B46855D75E214ED5AAC1B0CE /* PEResizeControl.h */ = {isa = PBXFileReference; name = "PEResizeControl.h"; path = "cordova-plugin-crop/PEResizeControl.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		FE7C04880CF64A8CB8A9139A /* UIImage+PECrop.h */ = {isa = PBXFileReference; name = "UIImage+PECrop.h"; path = "cordova-plugin-crop/UIImage+PECrop.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		74D357CA1B68432D81344B8F /* PEPhotoCropEditor.bundle */ = {isa = PBXFileReference; name = "PEPhotoCropEditor.bundle"; path = "PEPhotoCropEditor.bundle"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.plug-in; explicitFileType = undefined; includeInIndex = 0; };
+		AAAD5D3F50EC4E4F8BFD03ED /* QuartzCore.framework */ = {isa = PBXFileReference; name = "QuartzCore.framework"; path = "System/Library/Frameworks/QuartzCore.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +290,7 @@
 				9F683B09D1AC46AB9069FE16 /* AddressBook.framework in Frameworks */,
 				E52448533AD9457B80076B0D /* EventKit.framework in Frameworks */,
 				F985F7997EB34C7D889AB338 /* CoreMotion.framework in Frameworks */,
+				8C253B7BF53B49C6A588E53C /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +353,7 @@
 				3047A50E1AB8057F00498E2A /* config */,
 				8D1107310486CEB800E47090 /* UberService-Info.plist */,
 				6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */,
+				74D357CA1B68432D81344B8F /* PEPhotoCropEditor.bundle */,
 			);
 			name = Resources;
 			path = "UberService/Resources";
@@ -353,6 +377,7 @@
 				0E5176D2281B4960B7228CD4 /* AddressBook.framework */,
 				0598E7E8C62C40C492BFD286 /* EventKit.framework */,
 				6F914E375910465DA86B1B4B /* CoreMotion.framework */,
+				AAAD5D3F50EC4E4F8BFD03ED /* QuartzCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -485,6 +510,18 @@
 				B1958BB24724449D9C7E8CC7 /* Diagnostic_Motion.h */,
 				CF92AAB376624D71B61886BE /* CFCallNumber.m */,
 				FE7BD9E24AFC4F4783C0931C /* CFCallNumber.h */,
+				2F3D34EDF7EA4F439C0FA2D3 /* CTCrop.m */,
+				68EB074B552F49E79F513E83 /* PECropRectView.m */,
+				E4C35D3EC87F47EFB0676F03 /* PECropView.m */,
+				115670C7E46F4DF3990DEED2 /* PECropViewController.m */,
+				C4C025B63EE5473AB3009340 /* PEResizeControl.m */,
+				FF65F87DE44B47DCB068CFF4 /* UIImage+PECrop.m */,
+				15C01D96E7654CFAB4E207F8 /* CTCrop.h */,
+				57F2CFFA0F904B1F89F48B59 /* PECropRectView.h */,
+				7BD92EC064E246BDAAF8CC51 /* PECropView.h */,
+				0AB8A096C99249A2BB8DEDB2 /* PECropViewController.h */,
+				B46855D75E214ED5AAC1B0CE /* PEResizeControl.h */,
+				FE7C04880CF64A8CB8A9139A /* UIImage+PECrop.h */,
 			);
 			name = Plugins;
 			path = "UberService/Plugins";
@@ -566,6 +603,7 @@
 				302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */,
 				0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */,
 				6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */,
+				E315038771D340489976B66F /* PEPhotoCropEditor.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,6 +687,12 @@
 				AF8D806C2A294BABB7205AD8 /* Diagnostic_Reminders.m in Sources */,
 				AE322A52E50D4779B8767D60 /* Diagnostic_Motion.m in Sources */,
 				1386B072D209455A98267908 /* CFCallNumber.m in Sources */,
+				B01560D203924B508AC185F7 /* CTCrop.m in Sources */,
+				2815F39F5FF84C09B2C9EF30 /* PECropRectView.m in Sources */,
+				54AF07FB9AD543E38A076B4B /* PECropView.m in Sources */,
+				4CA71FEB8BCB4F59AB5132B6 /* PECropViewController.m in Sources */,
+				509212DC2B8F41E6AEB2F881 /* PEResizeControl.m in Sources */,
+				D7F6898EC8FD4174872885F7 /* UIImage+PECrop.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { IonicStorageModule } from '@ionic/storage';
 import { CallNumber } from '@ionic-native/call-number';
+import { Crop } from '@ionic-native/crop';
 import { Geolocation } from '@ionic-native/geolocation';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -117,6 +118,7 @@ import { CustomHttp } from '../providers/customHttp';
     HttpNativeProvider,
     CustomHttp,
     CallNumber,
+    Crop,
     SocialSharing,
     Geolocation,
     Diagnostic,

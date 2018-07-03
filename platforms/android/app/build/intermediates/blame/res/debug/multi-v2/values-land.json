@@ -4,6 +4,23 @@
             "outputFile": "/export/uberservice/app/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
+                    "source": "/home/fjsilva/.gradle/caches/transforms-1/files-1.1/android-crop-1.0.0.aar/a75a7103b7e33da82eafee9688083572/res/values-land/values-land.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "4",
+                        "startOffsets": "171",
+                        "endColumns": "47",
+                        "endOffsets": "214"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "328",
+                        "endColumns": "47",
+                        "endOffsets": "371"
+                    }
+                },
+                {
                     "source": "/home/fjsilva/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f222a5cc2ab8afaa30fbf03a9b7d8b5c/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5",

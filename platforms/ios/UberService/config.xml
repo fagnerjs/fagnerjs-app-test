@@ -103,6 +103,9 @@
     <feature name="CallNumber">
         <param name="ios-package" value="CFCallNumber" />
     </feature>
+    <feature name="CropPlugin">
+        <param name="ios-package" value="CTCrop" />
+    </feature>
     <name>UberService</name>
     <description>UberService</description>
     <author email="fagner.janderson@yahoo.com.br" href="https://www.facebook.com/fagnerjanderson/">Fagner Janderson</author>

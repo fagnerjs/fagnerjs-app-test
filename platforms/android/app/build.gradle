@@ -263,6 +263,7 @@ dependencies {
     compile "com.android.support:support-v4:24.1.1+"
     compile "com.android.support:support-v4:26.+"
     compile "com.android.support:appcompat-v7:26.+"
+    compile "com.soundcloud.android:android-crop:1.0.0@aar"
     // SUB-PROJECT DEPENDENCIES END
 }
 

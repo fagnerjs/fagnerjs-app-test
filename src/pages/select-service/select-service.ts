@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, ModalController, AlertController } from 'ionic-angular';
 import { Diagnostic } from '@ionic-native/diagnostic';
+import { Crop } from '@ionic-native/crop';
 import { OpenNativeSettings } from '@ionic-native/open-native-settings';
 import { MenuPage } from '../menu/menu';
 import { ServiceHiredProfilePage } from '../service-hired-profile/service-hired-profile';
@@ -28,10 +29,16 @@ export class SelectServicePage {
     private storage: Storage,
     private alertCtrl: AlertController,
     private diagnostic: Diagnostic,
-    private openSettings: OpenNativeSettings
+    private openSettings: OpenNativeSettings,
+    private crop: Crop
   ) {}
 
   ionViewDidLoad() {
+    this.crop.crop('path/to/image.jpg', {quality: 75})
+    .then(
+      newImage => console.log('new image path is: ' + newImage),
+      error => console.error('Error cropping image', error)
+    );
     this.diagnostic.isLocationEnabled().then(state => {
       if(!state) {
         const alert = this.alertCtrl.create({

@@ -9,12 +9,8 @@
         "parents": {
           "NSLocationWhenInUseUsageDescription": [
             {
-              "xml": "<string>This app requires access to your location when the screen is on and the app is displayed.</string>",
-              "count": 1
-            },
-            {
               "xml": "<string>We want your location! Best regards NSA</string>",
-              "count": 1,
+              "count": 2,
               "mode": "merge",
               "id": "config.xml"
             }
@@ -195,6 +191,10 @@
             {
               "xml": "<feature name=\"CallNumber\"><param name=\"ios-package\" value=\"CFCallNumber\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"CropPlugin\"><param name=\"ios-package\" value=\"CTCrop\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -248,6 +248,9 @@
       "PACKAGE_NAME": "io.ionic.starter"
     },
     "mx.ferreyra.callnumber": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-crop": {
       "PACKAGE_NAME": "io.ionic.starter"
     }
   },
@@ -676,6 +679,14 @@
       "clobbers": [
         "call"
       ]
+    },
+    {
+      "id": "cordova-plugin-crop.CropPlugin",
+      "file": "plugins/cordova-plugin-crop/www/crop.js",
+      "pluginId": "cordova-plugin-crop",
+      "clobbers": [
+        "plugins.crop"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -694,6 +705,7 @@
     "cordova-sqlite-storage": "2.3.0",
     "cordova-support-android-plugin": "1.0.1",
     "cordova.plugins.diagnostic": "4.0.8",
-    "mx.ferreyra.callnumber": "0.0.2"
+    "mx.ferreyra.callnumber": "0.0.2",
+    "cordova-plugin-crop": "0.3.1"
   }
 }

@@ -45,6 +45,9 @@
     },
     "mx.ferreyra.callnumber": {
       "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-crop": {
+      "PACKAGE_NAME": "io.ionic.starter"
     }
   },
   "dependent_plugins": {

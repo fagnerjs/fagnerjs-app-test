@@ -311,6 +311,14 @@ module.exports = [
         "file": "plugins/cordova-plugin-nativestorage/www/NativeStorageError.js",
         "id": "cordova-plugin-nativestorage.NativeStorageError",
         "pluginId": "cordova-plugin-nativestorage"
+    },
+    {
+        "file": "plugins/cordova-plugin-crop/www/crop.js",
+        "id": "cordova-plugin-crop.CropPlugin",
+        "pluginId": "cordova-plugin-crop",
+        "clobbers": [
+            "plugins.crop"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -330,7 +338,8 @@ module.exports.metadata =
     "cordova-plugin-geolocation": "4.0.1",
     "cordova.plugins.diagnostic": "4.0.8",
     "cordova-open-native-settings": "1.5.1",
-    "cordova-plugin-nativestorage": "2.3.1"
+    "cordova-plugin-nativestorage": "2.3.1",
+    "cordova-plugin-crop": "0.3.1"
 }
 // BOTTOM OF METADATA
 });

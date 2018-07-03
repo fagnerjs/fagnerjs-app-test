@@ -48040,14 +48040,23 @@ nav .right {
   width: 100%;
   margin-top: 60px;
 } */
+.signIn {
+  height: 100%;
+}
+
 .signIn .header {
   display: table;
   width: 100%;
-  height: 50vh;
+  height: 50%;
   margin: 0;
   padding: 15px 0;
   text-align: center;
   background: #fcfcfc;
+}
+
+.signIn form {
+  position: relative;
+  height: 50%;
 }
 
 .signIn img {
@@ -48058,7 +48067,7 @@ nav .right {
   padding: 15px 0;
   display: table;
   width: 100%;
-  height: calc(50vh - 118px);
+  height: calc(100% - 118px);
   background: #fff;
   -webkit-box-shadow: 0 1px 0 0 #f2f2f2, 0 -1px 0 0 #f2f2f2;
   box-shadow: 0 1px 0 0 #f2f2f2, 0 -1px 0 0 #f2f2f2;
@@ -48153,8 +48162,12 @@ nav .right {
   height: calc(82.9vh - 120px);
 }
 
+.signUp.password form ion-row {
+  height: calc(82.9vh - 180px);
+}
+
 .signUp label {
-  display: block;
+  display: table;
   width: 100%;
   background: #fff;
   -webkit-box-shadow: 0 1px 0 0 #f2f2f2, 0 -1px 0 0 #f2f2f2;
@@ -48172,6 +48185,7 @@ nav .right {
   margin-left: 32px;
   padding-bottom: 32px;
   text-align: left;
+  background: transparent;
 }
 
 /* Service Type
