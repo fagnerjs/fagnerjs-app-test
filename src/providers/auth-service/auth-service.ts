@@ -20,7 +20,7 @@ export class AuthServiceProvider {
       this.http.post(`${this.apiHost}/users/insert`, params, {headers: JSON.parse(JSON.stringify(this.headers))})
         .then(r => {
           this.authenticate(params.phone, params.password)
-            .then(resolve)
+            .then(() => resolve(r.body))
             .catch(reject);
         }).catch(reject)
     });
@@ -59,6 +59,14 @@ export class AuthServiceProvider {
 
   forgotPassword(params:any) {
     return this.http.get(`${this.apiHost}/users/forgot-password`, params);
+  }
+
+  uploadProfileImage(id, params) {
+    return new Promise((resolve, reject) => {
+      this.http.post(`${this.apiHost}/users/upload/${id}`, params, {headers: JSON.parse(JSON.stringify(this.headers))})
+        .then(resolve)
+        .catch(reject)
+    });
   }
 
   me(session:string) {

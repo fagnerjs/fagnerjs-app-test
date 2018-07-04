@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, LoadingController, Loading, AlertController } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
-
+import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
 import { SelectServicePage } from '../select-service/select-service';
+import configs from '../../app/config';
 
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 
@@ -24,13 +25,15 @@ export class PasswordPage {
   form: FormGroup;
   value: any;
   loading: Loading;
+  fileTransfer: FileTransferObject = this.transfer.create();
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     private formBuilder: FormBuilder,
     private loadingCtrl: LoadingController,
     private alertCtrl: AlertController,
-    private auth: AuthServiceProvider
+    private auth: AuthServiceProvider,
+    private transfer: FileTransfer
   ) {
     this.form = this.formBuilder.group({
       password: [null, [
@@ -85,13 +88,18 @@ export class PasswordPage {
 
     this.showLoading();
     this.auth.create(Object.assign(this.value, JSON.parse(JSON.stringify(this.form.value))))
-      .then(r => {
-        this.loading.dismiss().then(() => this.navCtrl.push(SelectServicePage));
+      .then((r:any) => {
+        const go = () => this.navCtrl.push(SelectServicePage);
+        if(this.value.profile_image) {
+          this.upload(r.data._id, this.value.profile_image).then(() => go(), () => go());
+        }else {
+          this.loading.dismiss().then(() => go(), () => go());
+        }
       })
       .catch(e => {
         const alert = this.alertCtrl.create({
           title: 'Falha',
-          subTitle: 'Ocorreu um erro efetuar o cadastro',
+          subTitle: 'Ocorreu um erro efetuar o cadastro' + e.message,
           buttons: [
             {
               text: 'Ok',
@@ -101,6 +109,15 @@ export class PasswordPage {
         });
         alert.present();
       });
+  }
+
+  upload(id, file) {
+    const options: FileUploadOptions = {
+      fileKey: 'file',
+      fileName: `${id}.jpg`,
+      headers: {}
+    }
+    return this.fileTransfer.upload(file, `${configs.API_HOST}/users/upload/${id}`, options)
   }
 
   back() {

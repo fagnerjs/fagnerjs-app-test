@@ -109,6 +109,9 @@
     <feature name="Camera">
         <param name="ios-package" value="CDVCamera" />
     </feature>
+    <feature name="FileTransfer">
+        <param name="ios-package" value="CDVFileTransfer" />
+    </feature>
     <name>UberService</name>
     <description>UberService</description>
     <author email="fagner.janderson@yahoo.com.br" href="https://www.facebook.com/fagnerjanderson/">Fagner Janderson</author>

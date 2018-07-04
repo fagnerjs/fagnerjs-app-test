@@ -463,6 +463,30 @@ module.exports = [
     "clobbers": [
       "CameraPopoverHandle"
     ]
+  },
+  {
+    "id": "com-badrit-base64.Base64",
+    "file": "plugins/com-badrit-base64/www/Base64.js",
+    "pluginId": "com-badrit-base64",
+    "clobbers": [
+      "navigator.Base64"
+    ]
+  },
+  {
+    "id": "cordova-plugin-file-transfer.FileTransferError",
+    "file": "plugins/cordova-plugin-file-transfer/www/FileTransferError.js",
+    "pluginId": "cordova-plugin-file-transfer",
+    "clobbers": [
+      "window.FileTransferError"
+    ]
+  },
+  {
+    "id": "cordova-plugin-file-transfer.FileTransfer",
+    "file": "plugins/cordova-plugin-file-transfer/www/FileTransfer.js",
+    "pluginId": "cordova-plugin-file-transfer",
+    "clobbers": [
+      "window.FileTransfer"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -485,7 +509,9 @@ module.exports.metadata =
   "cordova.plugins.diagnostic": "4.0.8",
   "mx.ferreyra.callnumber": "0.0.2",
   "cordova-plugin-crop": "0.3.1",
-  "cordova-plugin-camera": "4.0.3"
+  "cordova-plugin-camera": "4.0.3",
+  "com-badrit-base64": "0.2.0",
+  "cordova-plugin-file-transfer": "1.7.1"
 };
 // BOTTOM OF METADATA
 });

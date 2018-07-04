@@ -368,34 +368,76 @@ nav .right {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .signUp {
-  margin-top: 60px;
+  padding-top: 60px;
   display: table;
   width: 100%;
+  height: 100%;
 }
 .signUp ion-row {
   display: table-row;
 }
+
+.signUp .header {
+  height: 18.6%;
+}
+
 .signUp p {
   display: table-cell;
   padding: 15px 0;
-  height: 17.1vh;
   vertical-align: middle;
 }
-.signUp form {
+.signUp .form {
   display: table;
   width: 100%;
+  height: calc(81.4% + 120px);
 }
-.signUp form ion-row {
-  height: calc(82.9vh - 120px);
-}
-.signUp.password form ion-row {
-  height: calc(82.9vh - 180px);
+.signUp .form-container form {
+  position: relative;
+  display: table;
+  height: 100%;
+  width: 100%;
+  > ion-row {
+    height: 100%;
+  }
 }
 .signUp label {
   display: table;
   width: 100%;
   background: #fff;
   box-shadow: 0 1px 0 0 #f2f2f2, 0 -1px 0 0 #f2f2f2;
+}
+.signUp label .photo-profile {
+  padding-left: 32px;
+  padding-right: 32px;
+  > span {
+    margin-left: 0;
+  }
+}
+.signUp label .avatar {
+  float: left;
+  width: 120px;
+  height: 120px;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 28px;
+  background-color: #e2e2e2;
+}
+.signUp label .avatar img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  min-width: 56px;
+  height: 100%;
+}
+.signUp label .picture-actions {
+  float: right;
+  width: calc(100% - 132px);
+  button {
+    // height: 50px;
+  }
 }
 .signUp label span {
   margin-bottom: 8px;

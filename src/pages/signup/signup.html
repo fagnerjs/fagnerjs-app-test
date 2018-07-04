@@ -11,13 +11,13 @@
       </a> -->
   </nav>
   <div class="signUp">
-    <ion-row>
+    <ion-row class="header">
       <p>
         Você não tem cadastro, <br />
         crie grátis sua conta!
       </p>
     </ion-row>
-    <ion-row>
+    <ion-row class="form-container">
       <form name="signup" [formGroup]="form" (ngSubmit)="submit()">
         <ion-row>
           <label>
@@ -30,6 +30,19 @@
             <div class="verticallyCenter">
               <span>E-mail</span>
               <input type="email" formControlName="email" placeholder="maria.silva@email.com" />
+            </div>
+          </label>
+          <label>
+            <div class="verticallyCenter photo-profile">
+              <span>Foto de perfil</span>
+              <div class="avatar">
+                {{profileImage}}
+                <img *ngIf="profileImage" [src]="profileImage">
+              </div>
+              <div class="picture-actions">
+                <button type="button" (click)="takePicture()" class="button secondary">camera</button>
+                <button type="button" (click)="getImage()" class="button secondary">biblioteca</button>
+              </div>
             </div>
           </label>
         </ion-row>

@@ -4,6 +4,9 @@ import { HttpModule } from '@angular/http';
 import { IonicStorageModule } from '@ionic/storage';
 import { CallNumber } from '@ionic-native/call-number';
 import { Crop } from '@ionic-native/crop';
+import { Base64 } from '@ionic-native/base64';
+import { FileTransfer } from '@ionic-native/file-transfer';
+import { File } from '@ionic-native/file';
 import { Camera } from '@ionic-native/camera';
 import { Geolocation } from '@ionic-native/geolocation';
 import { SocialSharing } from '@ionic-native/social-sharing';
@@ -122,6 +125,9 @@ import { CustomHttp } from '../providers/customHttp';
     CustomHttp,
     CallNumber,
     Crop,
+    Base64,
+    FileTransfer,
+    File,
     Camera,
     SocialSharing,
     Geolocation,

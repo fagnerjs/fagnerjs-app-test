@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, AlertController, LoadingController, Loading } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
-import { CameraService } from '../../providers/camera-service/camera-service';
-
 import { SignupPage } from '../signup/signup';
 import { LoginPage } from '../login/login';
 
@@ -16,15 +13,14 @@ export class SigninPage {
   phone: string;
   form: FormGroup;
   value: any;
-  loading: Loading
+  loading: Loading;
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     private formBuilder: FormBuilder,
     private alertCtrl: AlertController,
     private auth: AuthServiceProvider,
-    private loadingCtrl: LoadingController,
-    private cameraService: CameraService
+    private loadingCtrl: LoadingController
   ) {
     this.form = this.formBuilder.group({
       phone: [null, [
@@ -37,9 +33,6 @@ export class SigninPage {
   }
 
   ionViewDidLoad() {
-    this.cameraService.getMedia().then(r => {
-      console.log('aaaa')
-    })
     this.form.get('phone').valueChanges.subscribe(v => {
       v = v || '';
       v = v

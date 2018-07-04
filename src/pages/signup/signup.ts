@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { PasswordPage } from '../password/password';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
+import { CameraService } from '../../providers/camera-service/camera-service';
 
 @Component({
   selector: 'page-signup',
@@ -13,13 +14,15 @@ export class SignupPage {
   form: FormGroup;
   value: any;
   loading: Loading;
+  profileImage: string;
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     private formBuilder: FormBuilder,
     private alertCtrl: AlertController,
     private auth: AuthServiceProvider,
-    private loadingCtrl: LoadingController
+    private loadingCtrl: LoadingController,
+    private cameraService: CameraService
   ) {
     this.form = this.formBuilder.group({
       first_name: [null, [
@@ -28,7 +31,8 @@ export class SignupPage {
       email: [null, [
         Validators.required,
         Validators.email
-      ]]
+      ]],
+      profile_image: [null, []]
     });
     this.value = this.navParams.data;
   }
@@ -94,6 +98,20 @@ export class SignupPage {
           alert.present();
         }
       });
+    });
+  }
+
+  takePicture() {
+    this.cameraService.takePhoto().then(imagePath => {
+      this.profileImage = imagePath;
+      this.form.get('profile_image').setValue(imagePath);
+    });
+  }
+
+  getImage() {
+    this.cameraService.getImage().then(imagePath => {
+      this.profileImage = imagePath;
+      this.form.get('profile_image').setValue(imagePath);
     });
   }
 
