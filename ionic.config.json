@@ -1,6 +1,6 @@
 {
   "name": "highgarden",
-  "app_id": "",
+  "app_id": "6e9d06ec",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
