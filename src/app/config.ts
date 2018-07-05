@@ -10,3 +10,4 @@ export default {
   location: {latitude: null, longitude: null}
 }
 
+
