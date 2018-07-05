@@ -8,7 +8,7 @@
         </a>
         <div class="userData">
             <div class="avatar">
-                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg" width="56p" />
+              <img *ngIf="user?.profile_image?.crops['60x60']?.url" [src]="apiHost + '/users/media?sourcepath=' + user?.profile_image?.crops['60x60']?.url" width="56p" />
             </div>
             <div class="info">
                 <h4>{{user.first_name}}</h4>

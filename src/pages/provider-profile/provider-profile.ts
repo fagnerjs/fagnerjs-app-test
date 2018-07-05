@@ -5,6 +5,7 @@ import { CallNumber } from '@ionic-native/call-number';
 import { SocialSharing } from '@ionic-native/social-sharing';
 
 import { ProviderSchedulePage } from '../provider-schedule/provider-schedule';
+import config from '../../app/config';
 
 @Component({
   selector: 'page-provider-profile',
@@ -12,7 +13,7 @@ import { ProviderSchedulePage } from '../provider-schedule/provider-schedule';
 })
 export class ProviderProfilePage {
   value: any;
-
+  apiHost: string = config.API_HOST;
   private _providerModel = {
     _id: null,
     profile_type: null,

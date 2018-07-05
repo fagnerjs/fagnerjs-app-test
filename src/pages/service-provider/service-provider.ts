@@ -14,6 +14,7 @@ import config from '../../app/config';
   templateUrl: 'service-provider.html',
 })
 export class ServiceProviderPage {
+  apiHost: string = config.API_HOST;
   value: any;
   loading: Loading;
   providersModel:any = {

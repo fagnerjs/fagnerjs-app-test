@@ -10,6 +10,7 @@ import { SelectServicePage } from '../select-service/select-service';
 })
 export class MenuPage {
   user: any = configs.settings.auth.user;
+  apiHost: string = configs.API_HOST;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
