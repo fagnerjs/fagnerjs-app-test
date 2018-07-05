@@ -48,13 +48,20 @@ export class ServiceProviderPage {
   }
 
   ionViewDidLoad(): void {
+    this.getProviders();
+  }
+
+  getProviders() {
     this.showLoading();
+    const rst = () => this.providers = JSON.parse(JSON.stringify(this.providersModel));
+    rst();
     this.userService.searchByGeo({geo:`${config.location.latitude},${config.location.longitude}`}).then(result => {
       this.providers = result.body;
       this.loading.dismiss();
     }).catch(err => {
       this.loading.dismiss().then(() => {
-        this.providers = JSON.parse(JSON.stringify(this.providersModel));
+        rst();
+        this.providers.error = true
       });
     });
   }

@@ -49267,3 +49267,10 @@ page-service-provider ion-select {
   z-index: 1;
   opacity: 0;
 }
+
+page-service-provider .alert span {
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+  padding: 30px 20%;
+  margin: 0 auto;
+}
